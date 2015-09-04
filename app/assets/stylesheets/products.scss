@@ -1,0 +1,32 @@
+// Place all the styles related to the products controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+table{
+    text-align:center;
+    margin: 2% auto;
+    width:80%;
+    
+}
+
+table thead tr {
+    border-bottom:1px dashed white;
+    
+}
+
+tr th {
+    
+    text-align: center;
+    
+}
+
+h1 {
+    text-align: center;
+    
+}
+
+table thead tr {
+    
+    font-size:1.5em;
+    
+}
+
