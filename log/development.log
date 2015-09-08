@@ -15593,3 +15593,54 @@ Completed 200 OK in 88ms (Views: 85.8ms | ActiveRecord: 0.3ms)
             FROM sqlite_temp_master
             WHERE name='index_orders_on_user_id' AND type='index'
 
+
+
+Started GET "/" for 127.0.0.1 at 2015-09-08 17:33:42 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#landing_page as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" LIMIT 3
+  Rendered static_pages/landing_page.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 275ms (Views: 262.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/products.self-83dac95e9be72b74efb9b6a6b286a3acc380c8e408e3190d3d558d5a6ec0a61c.css?body=1" for 127.0.0.1 at 2015-09-08 17:33:42 -0400
+
+
+Started GET "/assets/static_pages.self-ad0774b0d4a2eb199fe1075ce8507ded91a474ec05d3727fabd402c9963534fb.css?body=1" for 127.0.0.1 at 2015-09-08 17:33:42 -0400
+
+
+Started GET "/assets/scaffolds.self-0835d188e12b4cd85b7a19a850bdeb66768bb2676265da9242b20fbf7e37f9f2.css?body=1" for 127.0.0.1 at 2015-09-08 17:33:42 -0400
+
+
+Started GET "/assets/turbolinks.self-61e1f00548efe71d405b0196fefb00926afa1604f7ae2240e368a5bdd7184144.js?body=1" for 127.0.0.1 at 2015-09-08 17:33:42 -0400
+
+
+Started GET "/assets/application.self-ce56c79372b1b67ea3313b758eb6a9d069aba7036da6200e61c2d5c39fcbdf85.css?body=1" for 127.0.0.1 at 2015-09-08 17:33:43 -0400
+
+
+Started GET "/assets/jquery.self-c0aeac38aa941ec2dd88d290485efad29308ca522d2809b14f6e2e4831501937.js?body=1" for 127.0.0.1 at 2015-09-08 17:33:43 -0400
+
+
+Started GET "/assets/jquery_ujs.self-c350adabe6b48fc9194d6944ac444581924e960e313edce9e402db4112830d98.js?body=1" for 127.0.0.1 at 2015-09-08 17:33:43 -0400
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-09-08 17:33:43 -0400
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-09-08 17:33:43 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-09-08 17:33:43 -0400
+
+
+Started GET "/static_pages/contact" for 127.0.0.1 at 2015-09-08 17:33:46 -0400
+Processing by StaticPagesController#contact as HTML
+  Rendered static_pages/contact.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 78ms (Views: 76.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/static_pages/thank_you" for 127.0.0.1 at 2015-09-08 17:33:57 -0400
+Processing by StaticPagesController#thank_you as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"l+xNVqjuLqsPxqrOaPaKuSVd9YO1ZNUCUyNWZyV5ZptRHp9B5qBY0lMCHaF/TxQk3sJF3v9lPM/2KUo2rnpvBQ==", "name"=>"fdsafdsa", "email"=>"erwqrewr@trsaa.com", "message"=>"fdsahtrsfeafda", "commit"=>"Send"}
+  Rendered static_pages/thank_you.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 65ms (Views: 63.9ms | ActiveRecord: 0.0ms)
