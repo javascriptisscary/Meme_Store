@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   get 'static_pages/contact'
 
   get 'static_pages/index'
+  
+  
+  
 
   post 'static_pages/thank_you'
   
