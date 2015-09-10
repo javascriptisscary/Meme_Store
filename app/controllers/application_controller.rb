@@ -15,5 +15,9 @@ class ApplicationController < ActionController::Base
   def configure_permitted_parameters
     devise_parameter_sanitizer.for(:sign_up) << :username
   end
+  
+  rescue_from CanCan::AccessDenied do |exception|
+  redirect_to main_app.root_url, :alert => exception.message
+  end
 
 end
