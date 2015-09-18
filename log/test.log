@@ -1,0 +1,181 @@
+  [1m[36m (101.3ms)[0m  [1mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "body" text, "rating" integer, "product_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (74.0ms)[0m  [1mCREATE  INDEX "index_comments_on_product_id" ON "comments" ("product_id")[0m
+  [1m[35m (0.4ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_product_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_product_id' AND type='index'
+
+  [1m[36m (71.0ms)[0m  [1mCREATE  INDEX "index_comments_on_user_id" ON "comments" ("user_id")[0m
+  [1m[35m (75.1ms)[0m  CREATE TABLE "orders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "product_id" integer, "total" float) 
+  [1m[36m (73.6ms)[0m  [1mCREATE  INDEX "index_orders_on_product_id" ON "orders" ("product_id")[0m
+  [1m[35m (0.3ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_orders_on_product_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_orders_on_product_id' AND type='index'
+
+  [1m[36m (80.3ms)[0m  [1mCREATE  INDEX "index_orders_on_user_id" ON "orders" ("user_id")[0m
+  [1m[35m (80.8ms)[0m  CREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "image_url" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "color" varchar, "size" varchar) 
+  [1m[36m (92.7ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar, "last_name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "admin" boolean DEFAULT 'f' NOT NULL) [0m
+  [1m[35m (89.7ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (72.9ms)[0m  CREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")
+  [1m[36m (88.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (98.3ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (83.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150916171804')
+  [1m[36m (74.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150821012418')[0m
+  [1m[35m (74.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150909201730')
+  [1m[36m (83.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150817200904')[0m
+  [1m[35m (99.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150820163914')
+  [1m[36m (82.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150902051447')[0m
+  [1m[35m (74.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150915184355')
+  [1m[36m (74.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150909200545')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "products" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "funny meme"], ["created_at", "2015-09-18 16:01:53.901403"], ["updated_at", "2015-09-18 16:01:53.901403"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'email@example.com' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email", "email@example.com"], ["encrypted_password", "$2a$04$/thGWssozFb0r6OW1eyUjee7GY/ZTrvecvQHuUUQMRRg79XJuLfCe"], ["created_at", "2015-09-18 16:01:54.011062"], ["updated_at", "2015-09-18 16:01:54.011062"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("rating", "user_id", "body", "product_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["rating", 1], ["user_id", 1], ["body", "Awful meme!"], ["product_id", 1], ["created_at", "2015-09-18 16:01:54.058279"], ["updated_at", "2015-09-18 16:01:54.058279"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "comments" ("rating", "user_id", "body", "product_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["rating", 3], ["user_id", 1], ["body", "Avg meme!"], ["product_id", 1], ["created_at", "2015-09-18 16:01:54.061640"], ["updated_at", "2015-09-18 16:01:54.061640"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "comments" ("rating", "user_id", "body", "product_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["rating", 5], ["user_id", 1], ["body", "Great meme!"], ["product_id", 1], ["created_at", "2015-09-18 16:01:54.064317"], ["updated_at", "2015-09-18 16:01:54.064317"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 1]]
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "products" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "funny meme"], ["created_at", "2015-09-18 16:02:43.702547"], ["updated_at", "2015-09-18 16:02:43.702547"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'email@example.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email", "email@example.com"], ["encrypted_password", "$2a$04$ek8lLR4MqUjycmu/zei/geLUmy40CQvHJl2Nu1.KHkBIQY3C1OihS"], ["created_at", "2015-09-18 16:02:43.745146"], ["updated_at", "2015-09-18 16:02:43.745146"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "comments" ("rating", "user_id", "body", "product_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["rating", 1], ["user_id", 1], ["body", "Awful meme!"], ["product_id", 1], ["created_at", "2015-09-18 16:02:43.776718"], ["updated_at", "2015-09-18 16:02:43.776718"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "comments" ("rating", "user_id", "body", "product_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["rating", 3], ["user_id", 1], ["body", "Avg meme!"], ["product_id", 1], ["created_at", "2015-09-18 16:02:43.780082"], ["updated_at", "2015-09-18 16:02:43.780082"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "comments" ("rating", "user_id", "body", "product_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["rating", 5], ["user_id", 1], ["body", "Great meme!"], ["product_id", 1], ["created_at", "2015-09-18 16:02:43.782887"], ["updated_at", "2015-09-18 16:02:43.782887"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 1]]
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "products" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "funny meme"], ["created_at", "2015-09-18 16:04:20.686060"], ["updated_at", "2015-09-18 16:04:20.686060"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'email@example.com' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email", "email@example.com"], ["encrypted_password", "$2a$04$mSFjC31UUnbY.sfy5BxuA.erGftDKOIVmb4MaT6ROrsIY8sHja4im"], ["created_at", "2015-09-18 16:04:20.731627"], ["updated_at", "2015-09-18 16:04:20.731627"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("rating", "user_id", "body", "product_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["rating", 1], ["user_id", 1], ["body", "Awful meme!"], ["product_id", 1], ["created_at", "2015-09-18 16:04:20.779981"], ["updated_at", "2015-09-18 16:04:20.779981"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "comments" ("rating", "user_id", "body", "product_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["rating", 3], ["user_id", 1], ["body", "Avg meme!"], ["product_id", 1], ["created_at", "2015-09-18 16:04:20.783632"], ["updated_at", "2015-09-18 16:04:20.783632"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "comments" ("rating", "user_id", "body", "product_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["rating", 5], ["user_id", 1], ["body", "Great meme!"], ["product_id", 1], ["created_at", "2015-09-18 16:04:20.786407"], ["updated_at", "2015-09-18 16:04:20.786407"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 1]]
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "products" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "funny meme"], ["created_at", "2015-09-18 16:04:35.116343"], ["updated_at", "2015-09-18 16:04:35.116343"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'email@example.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email", "email@example.com"], ["encrypted_password", "$2a$04$XR.Xy9cxPRG4QgVBJTvbcukU0PiiylbFvoXCk89dert.n2wDA7KRC"], ["created_at", "2015-09-18 16:04:35.157800"], ["updated_at", "2015-09-18 16:04:35.157800"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("rating", "user_id", "body", "product_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["rating", 1], ["user_id", 1], ["body", "Awful meme!"], ["product_id", 1], ["created_at", "2015-09-18 16:04:35.189085"], ["updated_at", "2015-09-18 16:04:35.189085"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "comments" ("rating", "user_id", "body", "product_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["rating", 3], ["user_id", 1], ["body", "Avg meme!"], ["product_id", 1], ["created_at", "2015-09-18 16:04:35.192400"], ["updated_at", "2015-09-18 16:04:35.192400"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "comments" ("rating", "user_id", "body", "product_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["rating", 5], ["user_id", 1], ["body", "Great meme!"], ["product_id", 1], ["created_at", "2015-09-18 16:04:35.195174"], ["updated_at", "2015-09-18 16:04:35.195174"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 1]]
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "products" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "funny meme"], ["created_at", "2015-09-18 16:11:43.483258"], ["updated_at", "2015-09-18 16:11:43.483258"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'email@example.com' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email", "email@example.com"], ["encrypted_password", "$2a$04$E7.KGY71910g4eATEvNcc.3JUl0qZLFzhwapCu.G6CeEaC8IMG2oS"], ["created_at", "2015-09-18 16:11:43.524108"], ["updated_at", "2015-09-18 16:11:43.524108"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("rating", "user_id", "body", "product_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["rating", 1], ["user_id", 1], ["body", "Awful meme!"], ["product_id", 1], ["created_at", "2015-09-18 16:11:43.555580"], ["updated_at", "2015-09-18 16:11:43.555580"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "comments" ("rating", "user_id", "body", "product_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["rating", 3], ["user_id", 1], ["body", "Avg meme!"], ["product_id", 1], ["created_at", "2015-09-18 16:11:43.558940"], ["updated_at", "2015-09-18 16:11:43.558940"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "comments" ("rating", "user_id", "body", "product_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["rating", 5], ["user_id", 1], ["body", "Great meme!"], ["product_id", 1], ["created_at", "2015-09-18 16:11:43.561669"], ["updated_at", "2015-09-18 16:11:43.561669"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 1]]
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "products" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "funny meme"], ["created_at", "2015-09-18 16:14:30.164419"], ["updated_at", "2015-09-18 16:14:30.164419"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'email@example.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email", "email@example.com"], ["encrypted_password", "$2a$04$7yZj0z0SDY1OumUsBo4M4.aAjsmKR3PqbLrSfeprS8DmHFriYCltu"], ["created_at", "2015-09-18 16:14:30.207631"], ["updated_at", "2015-09-18 16:14:30.207631"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("rating", "user_id", "body", "product_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["rating", 1], ["user_id", 1], ["body", "Awful meme!"], ["product_id", 1], ["created_at", "2015-09-18 16:14:30.239455"], ["updated_at", "2015-09-18 16:14:30.239455"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "comments" ("rating", "user_id", "body", "product_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["rating", 3], ["user_id", 1], ["body", "Avg meme!"], ["product_id", 1], ["created_at", "2015-09-18 16:14:30.242927"], ["updated_at", "2015-09-18 16:14:30.242927"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "comments" ("rating", "user_id", "body", "product_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["rating", 5], ["user_id", 1], ["body", "Great meme!"], ["product_id", 1], ["created_at", "2015-09-18 16:14:30.245730"], ["updated_at", "2015-09-18 16:14:30.245730"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 1]]
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
