@@ -9,7 +9,8 @@ class Ability
       can :manage, :all
       else
         can :manage, User, id: user.id
-        can :read, :all
+        
+        
     end
   end
 

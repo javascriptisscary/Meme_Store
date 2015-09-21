@@ -43,6 +43,8 @@ gem 'hirb'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+#factory girl
+gem "factory_girl_rails", "~> 4.0"
 
 group :production do
   #postgres

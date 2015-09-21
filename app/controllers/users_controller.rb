@@ -1,12 +1,23 @@
 class UsersController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_user, only: [:show, :edit, :update, :destroy]
+  
   load_and_authorize_resource
+
+
+
+
 
   # GET /users
   # GET /users.json
   def index
+    #if user is not admin, cannot access index page
+    if current_user.admin == false
+      flash[:notice] = "You are not allowed access to the Users page."
+        redirect_to(static_pages_index_path)
+      else
     @users = User.all
-    
+    end
   end
 
   # GET /users/1
@@ -67,11 +78,18 @@ class UsersController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_user
+      
       @user = User.find(params[:id])
+       
     end
+
+
+    
+end
+
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
       params.require(:user).permit(:first_name, :last_name, :email, :admin)
     end
-end
+
