@@ -43,8 +43,7 @@ gem 'hirb'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-#factory girl
-gem "factory_girl_rails", "~> 4.0"
+
 
 group :production do
   #postgres
@@ -65,6 +64,9 @@ group :development, :test do
   
   # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
+
+#factory girl
+gem "factory_girl_rails", "~> 4.0"
 
 #for testing
 gem 'rspec-rails', '~> 3.0'

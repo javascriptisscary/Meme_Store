@@ -4,9 +4,8 @@ describe UsersController, :type => :controller do
   
   
     before do
-      @user1 = User.create(email: "example@example.com", password:   "12345678")
-      @user2 = User.create(email: "example2@example.com", password:   "12345678")
-      sign_in @user2
+      
+     
       end
     
    
@@ -19,8 +18,9 @@ describe UsersController, :type => :controller do
      context "No user is logged in" do
          
        it "redirects to login" do
+         @user1 = build(:user, email: "example@example.com", password:   "12345678", id: 1)
          get :show, id: @user1.id
-         expect(response).to redirect_to(root_path)
+         expect(response).to redirect_to(new_user_session_path)
          #expect(response).to have_http_status(302)
        end
     end
@@ -36,7 +36,8 @@ describe UsersController, :type => :controller do
         
         
         it "loads correct user details" do
-       
+        @user2 = create(:user, id: 10)
+        sign_in @user2
         get :show, id: @user2.id
         expect(response).to have_http_status(200)
         expect(assigns(:user)).to eq @user2
