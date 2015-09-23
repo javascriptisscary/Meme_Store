@@ -43,7 +43,8 @@ gem 'hirb'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-
+#for payment processing
+gem 'stripe'
 
 group :production do
   #postgres
