@@ -17,13 +17,7 @@
 <p>
   <strong>Price:</strong>
   
-  <%=
-  #add "$" and drop the last two zeroes becuz stripe is dumb, unless product is nil.
-  if (@product.price == nil)
-    @product.price
-    else
-  "$"+(@product.price.chop.chop)
-  end %>
+  <%=@product.cents_to_dollars(@product.price)%>
 </p>
 <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
 <div class="pay-button"<%= form_tag "/payments/create" do %>

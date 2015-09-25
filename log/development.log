@@ -28436,3 +28436,821 @@ Completed 200 OK in 87ms (Views: 83.2ms | ActiveRecord: 0.5ms)
 
 
 Started GET "/assets/star-off.png" for 127.0.0.1 at 2015-09-23 12:56:17 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2015-09-24 13:41:02 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#landing_page as HTML
+  [1m[35mProduct Load (0.5ms)[0m  SELECT  "products".* FROM "products" LIMIT 3
+  Rendered static_pages/landing_page.html.erb within layouts/application (44.7ms)
+Completed 200 OK in 1432ms (Views: 1385.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/payments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-09-24 13:41:03 -0400
+
+
+Started GET "/assets/payments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-09-24 13:41:03 -0400
+
+
+Started GET "/users/" for 127.0.0.1 at 2015-09-24 13:53:14 -0400
+Processing by UsersController#index as HTML
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2015-09-24 13:53:14 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (5.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (124.3ms)
+Completed 200 OK in 372ms (Views: 316.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2015-09-24 13:53:25 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2015-09-24 13:53:25 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 154ms (Views: 151.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/2/show" for 127.0.0.1 at 2015-09-24 13:53:37 -0400
+
+ActionController::RoutingError (No route matches [GET] "/users/2/show"):
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:13:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (3.9ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (6.4ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (14.5ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.8ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (119.1ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2015-09-24 13:53:46 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2015-09-24 13:53:46 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 105ms (Views: 103.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2015-09-24 15:04:37 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RvlSNKiuMJ9JRE4I7Yf8Ui/ylejusDJ9MoBqPLm5QcR6JoCjtdn2Tu0vjbb+WUSrLaS6LI9Nd1KTmCRSRcbJFQ==", "user"=>{"email"=>"bradley@careerfoundrysucks.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "bradley@careerfoundrysucks.com"]]
+Completed 401 Unauthorized in 370ms (ActiveRecord: 1.0ms)
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RvlSNKiuMJ9JRE4I7Yf8Ui/ylejusDJ9MoBqPLm5QcR6JoCjtdn2Tu0vjbb+WUSrLaS6LI9Nd1KTmCRSRcbJFQ==", "user"=>{"email"=>"bradley@careerfoundrysucks.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendered devise/shared/_links.html.erb (0.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 372ms (Views: 85.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2015-09-24 15:04:56 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5O/YhGW5mo1ElEe0zr3kwd1Pr6s1s8eux57ev5DUTojYMAoTeM5cXOD/hArdY1w43xmAb1ROgoFmhpDRbKvGWQ==", "user"=>{"email"=>"bradley@careerfoundrysucks.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "bradley@careerfoundrysucks.com"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2015-09-23 16:16:17.702259"], ["current_sign_in_at", "2015-09-24 19:04:56.578789"], ["sign_in_count", 15], ["updated_at", "2015-09-24 19:04:56.580042"], ["id", 3]]
+  [1m[36m (93.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/products
+Completed 302 Found in 460ms (ActiveRecord: 93.8ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-09-24 15:04:56 -0400
+DEPRECATION WARNING: `#deliver` is deprecated and will be removed in Rails 5. Use `#deliver_now` to deliver immediately or `#deliver_later` to deliver through Active Job. (called from <class:ProductsController> at /home/kenny/rubystack-2.2.2-3/linux_bike/app/controllers/products_controller.rb:8)
+
+ActionMailer::Base#mail: processed outbound mail in 325.5ms
+
+Sent mail to to@domain.com (359.3ms)
+Date: Thu, 24 Sep 2015 15:04:57 -0400
+From: from@domain.com
+To: to@domain.com
+Message-ID: <5604495912061_13e83fc7260793387923@kenny-N56VM.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+I am the email body.
+Processing by ProductsController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT  "products".* FROM "products" LIMIT 5 OFFSET 0[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "products"
+  Rendered products/_product.html.erb (7.7ms)
+  Rendered products/index.html.erb within layouts/application (52.2ms)
+Completed 200 OK in 175ms (Views: 160.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2015-09-24 15:06:02 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.7ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36m (0.3ms)[0m  [1mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 1]]
+  Rendered shared/_stripe_checkout_button.html.erb (0.8ms)
+  Rendered products/_new_comment.html.erb (32.2ms)
+  [1m[35mComment Load (0.3ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ?  ORDER BY created_at DESC LIMIT 3 OFFSET 0  [["product_id", 1]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 1]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered products/_list_comments.html.erb (18.0ms)
+  Rendered products/show.html.erb within layouts/application (77.9ms)
+Completed 200 OK in 288ms (Views: 185.4ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/star-off.png" for 127.0.0.1 at 2015-09-24 15:06:02 -0400
+
+
+Started GET "/assets/star-on.png" for 127.0.0.1 at 2015-09-24 15:06:02 -0400
+
+
+Started GET "/square-image.png" for 127.0.0.1 at 2015-09-24 15:06:04 -0400
+
+ActionController::RoutingError (No route matches [GET] "/square-image.png"):
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:13:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (5.2ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (2.1ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.6ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (79.9ms)
+
+
+Started GET "/square-image.png" for 127.0.0.1 at 2015-09-24 17:02:01 -0400
+
+ActionController::RoutingError (No route matches [GET] "/square-image.png"):
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:13:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (4.7ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (2.5ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.3ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (70.7ms)
+
+
+Started GET "/square-image.png" for 127.0.0.1 at 2015-09-24 17:20:21 -0400
+
+ActionController::RoutingError (No route matches [GET] "/square-image.png"):
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:13:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (4.8ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (1.9ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.5ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (68.2ms)
+
+
+Started GET "/static_pages/contact" for 127.0.0.1 at 2015-09-24 17:49:34 -0400
+Processing by StaticPagesController#contact as HTML
+  Rendered static_pages/contact.html.erb within layouts/application (4.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 136ms (Views: 126.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/static_pages/about" for 127.0.0.1 at 2015-09-24 17:51:38 -0400
+Processing by StaticPagesController#about as HTML
+  Rendered static_pages/about.html.erb within layouts/application (0.9ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+Completed 200 OK in 131ms (Views: 129.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/static_pages/contact" for 127.0.0.1 at 2015-09-24 17:51:40 -0400
+Processing by StaticPagesController#contact as HTML
+  Rendered static_pages/contact.html.erb within layouts/application (1.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 112ms (Views: 111.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-09-25 12:13:06 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#landing_page as HTML
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products" LIMIT 3
+  Rendered static_pages/landing_page.html.erb within layouts/application (33.9ms)
+Completed 200 OK in 1016ms (Views: 970.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2015-09-25 12:13:12 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (4.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (172.4ms)
+Completed 200 OK in 454ms (Views: 416.8ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2015-09-25 12:13:21 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rVF/PzgS+lGnX8tyXurawUL8n11YbjzDR4JeEtmK1X9rbiBoyjLE53i4LM7EmdzBNl2Eaa2acG7vEz3GSd/cUg==", "user"=>{"email"=>"crazedpokerplayer@mail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "crazedpokerplayer@mail.com"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2015-09-09 22:41:01.047925"], ["current_sign_in_at", "2015-09-25 16:13:22.335281"], ["sign_in_count", 7], ["updated_at", "2015-09-25 16:13:22.336798"], ["id", 1]]
+  [1m[35m (98.2ms)[0m  commit transaction
+Redirected to http://localhost:3000/products
+Completed 302 Found in 527ms (ActiveRecord: 99.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-09-25 12:13:22 -0400
+DEPRECATION WARNING: `#deliver` is deprecated and will be removed in Rails 5. Use `#deliver_now` to deliver immediately or `#deliver_later` to deliver through Active Job. (called from <class:ProductsController> at /home/kenny/rubystack-2.2.2-3/linux_bike/app/controllers/products_controller.rb:8)
+
+ActionMailer::Base#mail: processed outbound mail in 294.2ms
+
+Sent mail to to@domain.com (431.3ms)
+Date: Fri, 25 Sep 2015 12:13:22 -0400
+From: from@domain.com
+To: to@domain.com
+Message-ID: <560572a2cc9c3_115e3f9a6286371013948@kenny-N56VM.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+I am the email body.
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mProduct Load (0.5ms)[0m  SELECT  "products".* FROM "products" LIMIT 5 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "products"[0m
+  Rendered products/_product.html.erb (6.0ms)
+  Rendered products/index.html.erb within layouts/application (25.7ms)
+Completed 200 OK in 142ms (Views: 135.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2015-09-25 12:13:26 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (0.5ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.4ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ?  ORDER BY created_at DESC LIMIT 3 OFFSET 0  [["product_id", 1]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 1]]
+  Rendered products/show.html.erb within layouts/application (59.9ms)
+Completed 500 Internal Server Error in 142ms (ActiveRecord: 1.8ms)
+
+ActionView::Template::Error (undefined method `cents_to_dollars' for #<#<Class:0x007f34c30e5368>:0x007f34b2c512d0>):
+    17: <p>
+    18:   <strong>Price:</strong>
+    19:   
+    20:   <%=cents_to_dollars(@product.price)%>
+    21: </p>
+    22: <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
+    23: <div class="pay-button"<%= form_tag "/payments/create" do %>
+  app/views/products/show.html.erb:20:in `_app_views_products_show_html_erb__3474054588916286984_69932157156920'
+
+
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (24.6ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (7.4ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (2.0ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (93.1ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2015-09-25 12:13:27 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ?  ORDER BY created_at DESC LIMIT 3 OFFSET 0  [["product_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 1]]
+  Rendered products/show.html.erb within layouts/application (33.3ms)
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 0.5ms)
+
+ActionView::Template::Error (undefined method `cents_to_dollars' for #<#<Class:0x007f34c30e5368>:0x007f34b2493d68>):
+    17: <p>
+    18:   <strong>Price:</strong>
+    19:   
+    20:   <%=cents_to_dollars(@product.price)%>
+    21: </p>
+    22: <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
+    23: <div class="pay-button"<%= form_tag "/payments/create" do %>
+  app/views/products/show.html.erb:20:in `_app_views_products_show_html_erb__3474054588916286984_69932153081520'
+
+
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (12.0ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (4.1ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.6ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (46.8ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2015-09-25 12:16:15 -0400
+DEPRECATION WARNING: `#deliver` is deprecated and will be removed in Rails 5. Use `#deliver_now` to deliver immediately or `#deliver_later` to deliver through Active Job. (called from <class:ProductsController> at /home/kenny/rubystack-2.2.2-3/linux_bike/app/controllers/products_controller.rb:8)
+
+ActionMailer::Base#mail: processed outbound mail in 2.0ms
+
+Sent mail to to@domain.com (353.2ms)
+Date: Fri, 25 Sep 2015 12:16:15 -0400
+From: from@domain.com
+To: to@domain.com
+Message-ID: <5605734f98a9e_115e3f9a595310b4140ef@kenny-N56VM.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+I am the email body.
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 1.3ms)
+
+NameError (undefined local variable or method `product' for #<Class:0x007f34b3547f60>):
+  app/models/product.rb:11:in `<class:Product>'
+  app/models/product.rb:1:in `<top (required)>'
+  app/controllers/products_controller.rb:92:in `set_product'
+
+
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (23.5ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (7.4ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (2.2ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (93.8ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2015-09-25 12:16:40 -0400
+DEPRECATION WARNING: `#deliver` is deprecated and will be removed in Rails 5. Use `#deliver_now` to deliver immediately or `#deliver_later` to deliver through Active Job. (called from <class:ProductsController> at /home/kenny/rubystack-2.2.2-3/linux_bike/app/controllers/products_controller.rb:8)
+
+ActionMailer::Base#mail: processed outbound mail in 2.1ms
+
+Sent mail to to@domain.com (312.6ms)
+Date: Fri, 25 Sep 2015 12:16:40 -0400
+From: from@domain.com
+To: to@domain.com
+Message-ID: <5605736897708_115e3f9a595310b4141d8@kenny-N56VM.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+I am the email body.
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.4ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ?  ORDER BY created_at DESC LIMIT 3 OFFSET 0  [["product_id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 1]]
+  Rendered products/show.html.erb within layouts/application (48.5ms)
+Completed 500 Internal Server Error in 124ms (ActiveRecord: 3.6ms)
+
+ActionView::Template::Error (undefined local variable or method `product' for #<#<Class:0x007f34b2175d98>:0x007f34b21751b8>):
+    17: <p>
+    18:   <strong>Price:</strong>
+    19:   
+    20:   <%=product.cents_to_dollars(@product.price)%>
+    21: </p>
+    22: <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
+    23: <div class="pay-button"<%= form_tag "/payments/create" do %>
+  app/views/products/show.html.erb:20:in `_app_views_products_show_html_erb__3474054588916286984_69932151446020'
+
+
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (12.5ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (4.5ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.6ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (47.2ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2015-09-25 12:19:05 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.3ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ?  ORDER BY created_at DESC LIMIT 3 OFFSET 0  [["product_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 1]]
+  Rendered products/show.html.erb within layouts/application (48.8ms)
+Completed 500 Internal Server Error in 63ms (ActiveRecord: 0.9ms)
+
+ActionView::Template::Error (undefined method `cents_to_dollars' for #<#<Class:0x007f34b2175d98>:0x007f34c3419408>):
+    17: <p>
+    18:   <strong>Price:</strong>
+    19:   
+    20:   <%=self.cents_to_dollars(@product.price)%>
+    21: </p>
+    22: <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
+    23: <div class="pay-button"<%= form_tag "/payments/create" do %>
+  app/views/products/show.html.erb:20:in `_app_views_products_show_html_erb__3474054588916286984_69932295411060'
+
+
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (13.2ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (5.2ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.8ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (50.2ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2015-09-25 12:19:28 -0400
+DEPRECATION WARNING: `#deliver` is deprecated and will be removed in Rails 5. Use `#deliver_now` to deliver immediately or `#deliver_later` to deliver through Active Job. (called from <class:ProductsController> at /home/kenny/rubystack-2.2.2-3/linux_bike/app/controllers/products_controller.rb:8)
+
+ActionMailer::Base#mail: processed outbound mail in 2.5ms
+
+Sent mail to to@domain.com (286.3ms)
+Date: Fri, 25 Sep 2015 12:19:28 -0400
+From: from@domain.com
+To: to@domain.com
+Message-ID: <5605741097889_115e3f9a61a6355c142a8@kenny-N56VM.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+I am the email body.
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (0.4ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.4ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ?  ORDER BY created_at DESC LIMIT 3 OFFSET 0  [["product_id", 1]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 1]]
+  Rendered products/show.html.erb within layouts/application (48.9ms)
+Completed 500 Internal Server Error in 115ms (ActiveRecord: 3.6ms)
+
+ActionView::Template::Error (undefined method `cents_to_dollars' for #<#<Class:0x007f34c4ce6170>:0x007f34c4cd7c10>):
+    17: <p>
+    18:   <strong>Price:</strong>
+    19:   
+    20:   <%=cents_to_dollars(@product.price)%>
+    21: </p>
+    22: <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
+    23: <div class="pay-button"<%= form_tag "/payments/create" do %>
+  app/views/products/show.html.erb:20:in `_app_views_products_show_html_erb__3474054588916286984_69932308363680'
+
+
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (16.4ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (6.6ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.6ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (54.6ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2015-09-25 12:22:17 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.4ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ?  ORDER BY created_at DESC LIMIT 3 OFFSET 0  [["product_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 1]]
+  Rendered products/show.html.erb within layouts/application (53.8ms)
+Completed 500 Internal Server Error in 69ms (ActiveRecord: 0.9ms)
+
+ActionView::Template::Error (undefined local variable or method `product' for #<#<Class:0x007f34c4ce6170>:0x007f34b28284b0>):
+    17: <p>
+    18:   <strong>Price:</strong>
+    19:   
+    20:   <%=product.cents_to_dollars(@product.price)%>
+    21: </p>
+    22: <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
+    23: <div class="pay-button"<%= form_tag "/payments/create" do %>
+  app/views/products/show.html.erb:20:in `_app_views_products_show_html_erb__3474054588916286984_69932154950520'
+
+
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (12.4ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (4.7ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.4ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (46.9ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2015-09-25 12:22:30 -0400
+DEPRECATION WARNING: `#deliver` is deprecated and will be removed in Rails 5. Use `#deliver_now` to deliver immediately or `#deliver_later` to deliver through Active Job. (called from <class:ProductsController> at /home/kenny/rubystack-2.2.2-3/linux_bike/app/controllers/products_controller.rb:8)
+
+ActionMailer::Base#mail: processed outbound mail in 2.6ms
+
+Sent mail to to@domain.com (1306.8ms)
+Date: Fri, 25 Sep 2015 12:22:31 -0400
+From: from@domain.com
+To: to@domain.com
+Message-ID: <560574c7ca10_115e3f9a593ce9c414377@kenny-N56VM.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+I am the email body.
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.5ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ?  ORDER BY created_at DESC LIMIT 3 OFFSET 0  [["product_id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 1]]
+  Rendered products/show.html.erb within layouts/application (46.8ms)
+Completed 500 Internal Server Error in 122ms (ActiveRecord: 4.2ms)
+
+ActionView::Template::Error (undefined local variable or method `product' for #<#<Class:0x007f34b2312ae8>:0x007f34b2311f08>):
+    17: <p>
+    18:   <strong>Price:</strong>
+    19:   
+    20:   <%=product.cents_to_dollars(@product.price)%>
+    21: </p>
+    22: <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
+    23: <div class="pay-button"<%= form_tag "/payments/create" do %>
+  app/views/products/show.html.erb:20:in `_app_views_products_show_html_erb__3474054588916286984_69932154950520'
+
+
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (12.8ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (5.0ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.7ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (48.5ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2015-09-25 12:23:41 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered products/show.html.erb within layouts/application (8.5ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.5ms)
+
+ActionView::Template::Error (undefined method `cents_to_dollars' for #<Class:0x007f34b23e22e8>):
+    17: <p>
+    18:   <strong>Price:</strong>
+    19:   
+    20:   <%=Product.cents_to_dollars(@product.price)%>
+    21: </p>
+    22: <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
+    23: <div class="pay-button"<%= form_tag "/payments/create" do %>
+  app/views/products/show.html.erb:20:in `_app_views_products_show_html_erb__3474054588916286984_69932303909020'
+
+
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (12.5ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (5.2ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.8ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (48.7ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2015-09-25 12:32:58 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered products/show.html.erb within layouts/application (6.9ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (undefined method `cents_to_dollars' for #<Class:0x007f34b23e22e8>):
+    17: <p>
+    18:   <strong>Price:</strong>
+    19:   
+    20:   <%=Product.cents_to_dollars(@product.price)%>
+    21: </p>
+    22: <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
+    23: <div class="pay-button"<%= form_tag "/payments/create" do %>
+  app/views/products/show.html.erb:20:in `_app_views_products_show_html_erb__3474054588916286984_69932154518840'
+
+
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (12.5ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (4.7ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.5ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (47.5ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2015-09-25 12:36:40 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  SELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 1]]
+  Rendered shared/_stripe_checkout_button.html.erb (1.6ms)
+  Rendered products/_new_comment.html.erb (16.5ms)
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ?  ORDER BY created_at DESC LIMIT 3 OFFSET 0[0m  [["product_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered products/_list_comments.html.erb (15.8ms)
+  Rendered products/show.html.erb within layouts/application (73.4ms)
+Completed 200 OK in 189ms (Views: 182.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-09-25 12:36:40 -0400
+
+
+Started GET "/assets/jquery.raty.self-87ed0aee892c20d60b699b233626d04034355bea2c9d0d27b7586c39cb9ba493.css?body=1" for 127.0.0.1 at 2015-09-25 12:36:40 -0400
+
+
+Started GET "/assets/payments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-09-25 12:36:40 -0400
+
+
+Started GET "/assets/products.self-83dac95e9be72b74efb9b6a6b286a3acc380c8e408e3190d3d558d5a6ec0a61c.css?body=1" for 127.0.0.1 at 2015-09-25 12:36:40 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-09-25 12:36:40 -0400
+
+
+Started GET "/assets/scaffolds.self-0835d188e12b4cd85b7a19a850bdeb66768bb2676265da9242b20fbf7e37f9f2.css?body=1" for 127.0.0.1 at 2015-09-25 12:36:40 -0400
+
+
+Started GET "/assets/static_pages.self-ad0774b0d4a2eb199fe1075ce8507ded91a474ec05d3727fabd402c9963534fb.css?body=1" for 127.0.0.1 at 2015-09-25 12:36:40 -0400
+
+
+Started GET "/assets/application.self-5787477d694298d67defd2a9b1b353d559e3508e7b56fd2bda37ade4f627fa9d.css?body=1" for 127.0.0.1 at 2015-09-25 12:36:40 -0400
+
+
+Started GET "/assets/jquery.self-c0aeac38aa941ec2dd88d290485efad29308ca522d2809b14f6e2e4831501937.js?body=1" for 127.0.0.1 at 2015-09-25 12:36:40 -0400
+
+
+Started GET "/assets/jquery_ujs.self-c350adabe6b48fc9194d6944ac444581924e960e313edce9e402db4112830d98.js?body=1" for 127.0.0.1 at 2015-09-25 12:36:40 -0400
+
+
+Started GET "/assets/turbolinks.self-61e1f00548efe71d405b0196fefb00926afa1604f7ae2240e368a5bdd7184144.js?body=1" for 127.0.0.1 at 2015-09-25 12:36:40 -0400
+
+
+Started GET "/assets/comments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-09-25 12:36:40 -0400
+
+
+Started GET "/assets/jquery.raty.self-628421be04f36f7a8fa8b9b884c6d7824d6f8bdeba4f172b131f15aa63f713e8.js?body=1" for 127.0.0.1 at 2015-09-25 12:36:40 -0400
+
+
+Started GET "/assets/payments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-09-25 12:36:40 -0400
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-09-25 12:36:40 -0400
+
+
+Started GET "/assets/site.self-d19c89e62fd3f4c545b251d4f6875d52e73ec33d328d31020556f587a2ce1e4f.js?body=1" for 127.0.0.1 at 2015-09-25 12:36:40 -0400
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-09-25 12:36:40 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-09-25 12:36:40 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-09-25 12:36:40 -0400
+
+
+Started GET "/assets/star-on.png" for 127.0.0.1 at 2015-09-25 12:36:41 -0400
+
+
+Started GET "/assets/star-off.png" for 127.0.0.1 at 2015-09-25 12:36:41 -0400
+
+
+Started GET "/products" for 127.0.0.1 at 2015-09-25 12:36:54 -0400
+Processing by ProductsController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT  "products".* FROM "products" LIMIT 5 OFFSET 0[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "products"
+  Rendered products/_product.html.erb (7.0ms)
+  Rendered products/index.html.erb within layouts/application (18.3ms)
+Completed 200 OK in 166ms (Views: 159.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2015-09-25 12:36:57 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 2]]
+  Rendered shared/_stripe_checkout_button.html.erb (1.0ms)
+  Rendered products/_new_comment.html.erb (4.2ms)
+  [1m[35mComment Load (0.1ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ?  ORDER BY created_at DESC LIMIT 3 OFFSET 0  [["product_id", 2]]
+  Rendered products/_list_comments.html.erb (2.4ms)
+  Rendered products/show.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 133ms (Views: 127.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/square-image.png" for 127.0.0.1 at 2015-09-25 12:43:18 -0400
+
+ActionController::RoutingError (No route matches [GET] "/square-image.png"):
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:13:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (5.0ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (10.2ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.6ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (90.4ms)

@@ -8,4 +8,13 @@ class Product < ActiveRecord::Base
      comments.average(:rating).to_f
    end
    
+   def cents_to_dollars(amount)
+   #add "$" and drop the last two zeroes becuz stripe is dumb, unless product is nil.
+     if (amount == nil)
+       amount
+     else
+       "$"+(amount.chop.chop)
+     end
+   end
+   
 end
