@@ -29291,3 +29291,942 @@ ActionController::RoutingError (No route matches [GET] "/square-image.png"):
   Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.8ms)
   Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.5ms)
   Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (72.9ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2015-09-25 13:21:03 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 1]]
+  Rendered shared/_stripe_checkout_button.html.erb (0.1ms)
+  Rendered products/_new_comment.html.erb (2.0ms)
+  [1m[35mComment Load (0.2ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ?  ORDER BY created_at DESC LIMIT 3 OFFSET 0  [["product_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered products/_list_comments.html.erb (5.7ms)
+  Rendered products/show.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 96ms (Views: 92.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/star-off.png" for 127.0.0.1 at 2015-09-25 13:21:03 -0400
+
+
+Started GET "/assets/star-on.png" for 127.0.0.1 at 2015-09-25 13:21:03 -0400
+
+
+Started GET "/products/3" for 127.0.0.1 at 2015-09-25 13:21:08 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 3]]
+  Rendered shared/_stripe_checkout_button.html.erb (0.2ms)
+  Rendered products/_new_comment.html.erb (3.6ms)
+  [1m[35mComment Load (0.2ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ?  ORDER BY created_at DESC LIMIT 3 OFFSET 0  [["product_id", 3]]
+  Rendered products/_list_comments.html.erb (1.2ms)
+  Rendered products/show.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 123ms (Views: 116.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/star-off.png" for 127.0.0.1 at 2015-09-25 13:21:09 -0400
+
+
+Started GET "/square-image.png" for 127.0.0.1 at 2015-09-25 13:21:12 -0400
+
+ActionController::RoutingError (No route matches [GET] "/square-image.png"):
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:13:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (6.9ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (1.9ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (2.0ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (74.9ms)
+
+
+Started GET "/products/3" for 127.0.0.1 at 2015-09-25 13:23:04 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 3]]
+  Rendered shared/_stripe_checkout_button.html.erb (0.2ms)
+  Rendered products/_new_comment.html.erb (3.7ms)
+  [1m[35mComment Load (0.2ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ?  ORDER BY created_at DESC LIMIT 3 OFFSET 0  [["product_id", 3]]
+  Rendered products/_list_comments.html.erb (1.4ms)
+  Rendered products/show.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 143ms (Views: 136.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-09-25 13:23:04 -0400
+
+
+Started GET "/assets/jquery.raty.self-87ed0aee892c20d60b699b233626d04034355bea2c9d0d27b7586c39cb9ba493.css?body=1" for 127.0.0.1 at 2015-09-25 13:23:04 -0400
+
+
+Started GET "/assets/payments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-09-25 13:23:04 -0400
+
+
+Started GET "/assets/products.self-83dac95e9be72b74efb9b6a6b286a3acc380c8e408e3190d3d558d5a6ec0a61c.css?body=1" for 127.0.0.1 at 2015-09-25 13:23:04 -0400
+
+
+Started GET "/assets/scaffolds.self-0835d188e12b4cd85b7a19a850bdeb66768bb2676265da9242b20fbf7e37f9f2.css?body=1" for 127.0.0.1 at 2015-09-25 13:23:04 -0400
+
+
+Started GET "/assets/static_pages.self-ad0774b0d4a2eb199fe1075ce8507ded91a474ec05d3727fabd402c9963534fb.css?body=1" for 127.0.0.1 at 2015-09-25 13:23:04 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-09-25 13:23:04 -0400
+
+
+Started GET "/assets/application.self-5787477d694298d67defd2a9b1b353d559e3508e7b56fd2bda37ade4f627fa9d.css?body=1" for 127.0.0.1 at 2015-09-25 13:23:04 -0400
+
+
+Started GET "/assets/jquery.self-c0aeac38aa941ec2dd88d290485efad29308ca522d2809b14f6e2e4831501937.js?body=1" for 127.0.0.1 at 2015-09-25 13:23:04 -0400
+
+
+Started GET "/assets/jquery_ujs.self-c350adabe6b48fc9194d6944ac444581924e960e313edce9e402db4112830d98.js?body=1" for 127.0.0.1 at 2015-09-25 13:23:04 -0400
+
+
+Started GET "/assets/turbolinks.self-61e1f00548efe71d405b0196fefb00926afa1604f7ae2240e368a5bdd7184144.js?body=1" for 127.0.0.1 at 2015-09-25 13:23:04 -0400
+
+
+Started GET "/assets/comments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-09-25 13:23:04 -0400
+
+
+Started GET "/assets/jquery.raty.self-628421be04f36f7a8fa8b9b884c6d7824d6f8bdeba4f172b131f15aa63f713e8.js?body=1" for 127.0.0.1 at 2015-09-25 13:23:04 -0400
+
+
+Started GET "/assets/payments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-09-25 13:23:04 -0400
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-09-25 13:23:04 -0400
+
+
+Started GET "/assets/site.self-d19c89e62fd3f4c545b251d4f6875d52e73ec33d328d31020556f587a2ce1e4f.js?body=1" for 127.0.0.1 at 2015-09-25 13:23:04 -0400
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-09-25 13:23:04 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-09-25 13:23:04 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-09-25 13:23:04 -0400
+
+
+Started GET "/assets/star-off.png" for 127.0.0.1 at 2015-09-25 13:23:04 -0400
+
+
+Started GET "/products" for 127.0.0.1 at 2015-09-25 16:15:06 -0400
+DEPRECATION WARNING: `#deliver` is deprecated and will be removed in Rails 5. Use `#deliver_now` to deliver immediately or `#deliver_later` to deliver through Active Job. (called from <class:ProductsController> at /home/kenny/rubystack-2.2.2-3/linux_bike/app/controllers/products_controller.rb:8)
+
+ActionMailer::Base#mail: processed outbound mail in 2.3ms
+
+Sent mail to to@domain.com (412.0ms)
+Date: Fri, 25 Sep 2015 16:15:07 -0400
+From: from@domain.com
+To: to@domain.com
+Message-ID: <5605ab4b162fa_115e3f9a59569220144f9@kenny-N56VM.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+I am the email body.
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products" LIMIT 5 OFFSET 0
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "products"[0m
+  Rendered products/_product.html.erb (4.5ms)
+  Rendered products/index.html.erb within layouts/application (25.3ms)
+Completed 200 OK in 169ms (Views: 123.3ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/products/3" for 127.0.0.1 at 2015-09-25 16:15:10 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 3]]
+  Rendered shared/_stripe_checkout_button.html.erb (0.1ms)
+  Rendered products/_new_comment.html.erb (12.1ms)
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ?  ORDER BY created_at DESC LIMIT 3 OFFSET 0[0m  [["product_id", 3]]
+  Rendered products/_list_comments.html.erb (1.2ms)
+  Rendered products/show.html.erb within layouts/application (22.7ms)
+Completed 200 OK in 129ms (Views: 115.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-09-25 16:15:12 -0400
+Processing by ProductsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" LIMIT 5 OFFSET 0[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "products"
+  Rendered products/_product.html.erb (3.0ms)
+  Rendered products/index.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 99ms (Views: 95.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2015-09-25 16:15:14 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 1]]
+  Rendered shared/_stripe_checkout_button.html.erb (0.2ms)
+  Rendered products/_new_comment.html.erb (3.6ms)
+  [1m[35mComment Load (0.3ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ?  ORDER BY created_at DESC LIMIT 3 OFFSET 0  [["product_id", 1]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 1]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered products/_list_comments.html.erb (14.9ms)
+  Rendered products/show.html.erb within layouts/application (30.3ms)
+Completed 200 OK in 154ms (Views: 146.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/star-on.png" for 127.0.0.1 at 2015-09-25 16:15:14 -0400
+
+
+Started GET "/square-image.png" for 127.0.0.1 at 2015-09-25 16:15:16 -0400
+
+ActionController::RoutingError (No route matches [GET] "/square-image.png"):
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:13:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (5.1ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (2.0ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.5ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (72.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-09-27 15:18:37 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#landing_page as HTML
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products" LIMIT 3
+  Rendered static_pages/landing_page.html.erb within layouts/application (44.7ms)
+Completed 200 OK in 1002ms (Views: 962.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-09-27 15:18:41 -0400
+
+
+Started GET "/products" for 127.0.0.1 at 2015-09-27 15:21:34 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: `#deliver` is deprecated and will be removed in Rails 5. Use `#deliver_now` to deliver immediately or `#deliver_later` to deliver through Active Job. (called from <class:ProductsController> at /home/kenny/rubystack-2.2.2-3/linux_bike/app/controllers/products_controller.rb:8)
+
+ActionMailer::Base#mail: processed outbound mail in 517.7ms
+
+Sent mail to to@domain.com (369.9ms)
+Date: Sun, 27 Sep 2015 15:21:35 -0400
+From: from@domain.com
+To: to@domain.com
+Message-ID: <560841bf20299_f333fdaf8e988d460567@kenny-N56VM.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+I am the email body.
+Processing by ProductsController#index as HTML
+Completed 401 Unauthorized in 36ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2015-09-27 15:21:35 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (2.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (64.9ms)
+Completed 200 OK in 452ms (Views: 415.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-09-27 15:21:36 -0400
+
+
+Started GET "/assets/jquery.raty.self-87ed0aee892c20d60b699b233626d04034355bea2c9d0d27b7586c39cb9ba493.css?body=1" for 127.0.0.1 at 2015-09-27 15:21:36 -0400
+
+
+Started GET "/assets/payments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-09-27 15:21:36 -0400
+
+
+Started GET "/assets/products.self-83dac95e9be72b74efb9b6a6b286a3acc380c8e408e3190d3d558d5a6ec0a61c.css?body=1" for 127.0.0.1 at 2015-09-27 15:21:36 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-09-27 15:21:36 -0400
+
+
+Started GET "/assets/scaffolds.self-0835d188e12b4cd85b7a19a850bdeb66768bb2676265da9242b20fbf7e37f9f2.css?body=1" for 127.0.0.1 at 2015-09-27 15:21:36 -0400
+
+
+Started GET "/assets/static_pages.self-ad0774b0d4a2eb199fe1075ce8507ded91a474ec05d3727fabd402c9963534fb.css?body=1" for 127.0.0.1 at 2015-09-27 15:21:36 -0400
+
+
+Started GET "/assets/application.self-5787477d694298d67defd2a9b1b353d559e3508e7b56fd2bda37ade4f627fa9d.css?body=1" for 127.0.0.1 at 2015-09-27 15:21:36 -0400
+
+
+Started GET "/assets/jquery.self-c0aeac38aa941ec2dd88d290485efad29308ca522d2809b14f6e2e4831501937.js?body=1" for 127.0.0.1 at 2015-09-27 15:21:36 -0400
+
+
+Started GET "/assets/jquery_ujs.self-c350adabe6b48fc9194d6944ac444581924e960e313edce9e402db4112830d98.js?body=1" for 127.0.0.1 at 2015-09-27 15:21:36 -0400
+
+
+Started GET "/assets/turbolinks.self-61e1f00548efe71d405b0196fefb00926afa1604f7ae2240e368a5bdd7184144.js?body=1" for 127.0.0.1 at 2015-09-27 15:21:36 -0400
+
+
+Started GET "/assets/comments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-09-27 15:21:36 -0400
+
+
+Started GET "/assets/jquery.raty.self-628421be04f36f7a8fa8b9b884c6d7824d6f8bdeba4f172b131f15aa63f713e8.js?body=1" for 127.0.0.1 at 2015-09-27 15:21:36 -0400
+
+
+Started GET "/assets/payments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-09-27 15:21:36 -0400
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-09-27 15:21:36 -0400
+
+
+Started GET "/assets/site.self-d19c89e62fd3f4c545b251d4f6875d52e73ec33d328d31020556f587a2ce1e4f.js?body=1" for 127.0.0.1 at 2015-09-27 15:21:36 -0400
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-09-27 15:21:36 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-09-27 15:21:36 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-09-27 15:21:36 -0400
+
+
+Started POST "/login" for 127.0.0.1 at 2015-09-27 15:21:44 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Qk+IBTckcBU7W+UOgu2OAOj4RDjgSVjMp5Nr7d3Y0M45zcigaF/Mc8SDLfZLZfBlO8/vhdOrLTnEUYhINIj3aA==", "user"=>{"email"=>"bradley@careerfoundrysucks.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "bradley@careerfoundrysucks.com"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2015-09-24 19:04:56.578789"], ["current_sign_in_at", "2015-09-27 19:21:44.952110"], ["sign_in_count", 16], ["updated_at", "2015-09-27 19:21:44.953563"], ["id", 3]]
+  [1m[36m (95.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/products
+Completed 302 Found in 548ms (ActiveRecord: 96.7ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-09-27 15:21:45 -0400
+Processing by ProductsController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mProduct Load (0.6ms)[0m  [1mSELECT  "products".* FROM "products" LIMIT 5 OFFSET 0[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "products"
+  Rendered products/_product.html.erb (31.8ms)
+  Rendered products/index.html.erb within layouts/application (69.2ms)
+Completed 200 OK in 288214ms (Views: 555.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2015-09-27 16:58:22 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered users/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 614ms (Views: 546.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users/3/edit" for 127.0.0.1 at 2015-09-27 16:58:26 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered users/_form.html.erb (54.6ms)
+  Rendered users/edit.html.erb within layouts/application (66.2ms)
+Completed 200 OK in 229ms (Views: 218.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/edit" for 127.0.0.1 at 2015-09-27 16:58:29 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  Rendered devise/registrations/edit.html.erb within layouts/application (18.1ms)
+Completed 200 OK in 237ms (Views: 228.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/3/edit" for 127.0.0.1 at 2015-09-27 16:58:51 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered users/_form.html.erb (6.6ms)
+  Rendered users/edit.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 179ms (Views: 168.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/edit" for 127.0.0.1 at 2015-09-27 17:01:21 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  Rendered devise/registrations/edit.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 149ms (Views: 146.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/3/edit" for 127.0.0.1 at 2015-09-27 17:01:28 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered users/_form.html.erb (7.7ms)
+  Rendered users/edit.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 207ms (Views: 193.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/edit" for 127.0.0.1 at 2015-09-27 17:01:33 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  Rendered devise/registrations/edit.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 179ms (Views: 173.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-09-27 22:48:42 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#landing_page as HTML
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products" LIMIT 3
+  Rendered static_pages/landing_page.html.erb within layouts/application (38.8ms)
+Completed 200 OK in 1017ms (Views: 971.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-09-27 22:48:43 -0400
+
+
+Started GET "/assets/jquery.raty.self-87ed0aee892c20d60b699b233626d04034355bea2c9d0d27b7586c39cb9ba493.css?body=1" for 127.0.0.1 at 2015-09-27 22:48:43 -0400
+
+
+Started GET "/assets/payments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-09-27 22:48:43 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-09-27 22:48:43 -0400
+
+
+Started GET "/assets/scaffolds.self-0835d188e12b4cd85b7a19a850bdeb66768bb2676265da9242b20fbf7e37f9f2.css?body=1" for 127.0.0.1 at 2015-09-27 22:48:43 -0400
+
+
+Started GET "/assets/static_pages.self-ad0774b0d4a2eb199fe1075ce8507ded91a474ec05d3727fabd402c9963534fb.css?body=1" for 127.0.0.1 at 2015-09-27 22:48:43 -0400
+
+
+Started GET "/assets/products.self-83dac95e9be72b74efb9b6a6b286a3acc380c8e408e3190d3d558d5a6ec0a61c.css?body=1" for 127.0.0.1 at 2015-09-27 22:48:43 -0400
+
+
+Started GET "/assets/application.self-5787477d694298d67defd2a9b1b353d559e3508e7b56fd2bda37ade4f627fa9d.css?body=1" for 127.0.0.1 at 2015-09-27 22:48:43 -0400
+
+
+Started GET "/assets/jquery.self-c0aeac38aa941ec2dd88d290485efad29308ca522d2809b14f6e2e4831501937.js?body=1" for 127.0.0.1 at 2015-09-27 22:48:43 -0400
+
+
+Started GET "/assets/jquery_ujs.self-c350adabe6b48fc9194d6944ac444581924e960e313edce9e402db4112830d98.js?body=1" for 127.0.0.1 at 2015-09-27 22:48:43 -0400
+
+
+Started GET "/assets/turbolinks.self-61e1f00548efe71d405b0196fefb00926afa1604f7ae2240e368a5bdd7184144.js?body=1" for 127.0.0.1 at 2015-09-27 22:48:43 -0400
+
+
+Started GET "/assets/comments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-09-27 22:48:43 -0400
+
+
+Started GET "/assets/jquery.raty.self-628421be04f36f7a8fa8b9b884c6d7824d6f8bdeba4f172b131f15aa63f713e8.js?body=1" for 127.0.0.1 at 2015-09-27 22:48:43 -0400
+
+
+Started GET "/assets/payments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-09-27 22:48:43 -0400
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-09-27 22:48:43 -0400
+
+
+Started GET "/assets/site.self-d19c89e62fd3f4c545b251d4f6875d52e73ec33d328d31020556f587a2ce1e4f.js?body=1" for 127.0.0.1 at 2015-09-27 22:48:43 -0400
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-09-27 22:48:43 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-09-27 22:48:43 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-09-27 22:48:43 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2015-09-27 22:48:56 -0400
+Processing by StaticPagesController#landing_page as HTML
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" LIMIT 3[0m
+  Rendered static_pages/landing_page.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 116ms (Views: 114.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-09-27 22:48:56 -0400
+
+
+Started GET "/assets/products.self-83dac95e9be72b74efb9b6a6b286a3acc380c8e408e3190d3d558d5a6ec0a61c.css?body=1" for 127.0.0.1 at 2015-09-27 22:48:56 -0400
+
+
+Started GET "/assets/payments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-09-27 22:48:56 -0400
+
+
+Started GET "/assets/jquery.raty.self-87ed0aee892c20d60b699b233626d04034355bea2c9d0d27b7586c39cb9ba493.css?body=1" for 127.0.0.1 at 2015-09-27 22:48:56 -0400
+
+
+Started GET "/assets/scaffolds.self-0835d188e12b4cd85b7a19a850bdeb66768bb2676265da9242b20fbf7e37f9f2.css?body=1" for 127.0.0.1 at 2015-09-27 22:48:56 -0400
+
+
+Started GET "/assets/static_pages.self-ad0774b0d4a2eb199fe1075ce8507ded91a474ec05d3727fabd402c9963534fb.css?body=1" for 127.0.0.1 at 2015-09-27 22:48:56 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-09-27 22:48:56 -0400
+
+
+Started GET "/assets/application.self-5787477d694298d67defd2a9b1b353d559e3508e7b56fd2bda37ade4f627fa9d.css?body=1" for 127.0.0.1 at 2015-09-27 22:48:56 -0400
+
+
+Started GET "/assets/jquery.self-c0aeac38aa941ec2dd88d290485efad29308ca522d2809b14f6e2e4831501937.js?body=1" for 127.0.0.1 at 2015-09-27 22:48:56 -0400
+
+
+Started GET "/assets/jquery_ujs.self-c350adabe6b48fc9194d6944ac444581924e960e313edce9e402db4112830d98.js?body=1" for 127.0.0.1 at 2015-09-27 22:48:56 -0400
+
+
+Started GET "/assets/turbolinks.self-61e1f00548efe71d405b0196fefb00926afa1604f7ae2240e368a5bdd7184144.js?body=1" for 127.0.0.1 at 2015-09-27 22:48:56 -0400
+
+
+Started GET "/assets/comments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-09-27 22:48:56 -0400
+
+
+Started GET "/assets/jquery.raty.self-628421be04f36f7a8fa8b9b884c6d7824d6f8bdeba4f172b131f15aa63f713e8.js?body=1" for 127.0.0.1 at 2015-09-27 22:48:56 -0400
+
+
+Started GET "/assets/payments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-09-27 22:48:56 -0400
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-09-27 22:48:56 -0400
+
+
+Started GET "/assets/site.self-d19c89e62fd3f4c545b251d4f6875d52e73ec33d328d31020556f587a2ce1e4f.js?body=1" for 127.0.0.1 at 2015-09-27 22:48:56 -0400
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-09-27 22:48:56 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-09-27 22:48:56 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-09-27 22:48:56 -0400
+
+
+Started GET "/products" for 127.0.0.1 at 2015-09-27 22:52:15 -0400
+DEPRECATION WARNING: `#deliver` is deprecated and will be removed in Rails 5. Use `#deliver_now` to deliver immediately or `#deliver_later` to deliver through Active Job. (called from <class:ProductsController> at /home/kenny/rubystack-2.2.2-3/linux_bike/app/controllers/products_controller.rb:8)
+
+ActionMailer::Base#mail: processed outbound mail in 330.4ms
+
+Sent mail to to@domain.com (561.8ms)
+Date: Sun, 27 Sep 2015 22:52:15 -0400
+From: from@domain.com
+To: to@domain.com
+Message-ID: <5608ab5fda2ee_f4d3f95eec8515478435@kenny-N56VM.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+I am the email body.
+Processing by ProductsController#index as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2015-09-27 22:52:16 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (3.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (95.6ms)
+Completed 200 OK in 286ms (Views: 247.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2015-09-27 22:56:53 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 129ms (Views: 126.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-09-27 23:05:36 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#landing_page as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" LIMIT 3
+  Rendered static_pages/landing_page.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 581ms (Views: 559.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-09-27 23:05:36 -0400
+
+
+Started GET "/assets/jquery.raty.self-87ed0aee892c20d60b699b233626d04034355bea2c9d0d27b7586c39cb9ba493.css?body=1" for 127.0.0.1 at 2015-09-27 23:05:36 -0400
+
+
+Started GET "/assets/payments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-09-27 23:05:36 -0400
+
+
+Started GET "/assets/scaffolds.self-0835d188e12b4cd85b7a19a850bdeb66768bb2676265da9242b20fbf7e37f9f2.css?body=1" for 127.0.0.1 at 2015-09-27 23:05:36 -0400
+
+
+Started GET "/assets/products.self-83dac95e9be72b74efb9b6a6b286a3acc380c8e408e3190d3d558d5a6ec0a61c.css?body=1" for 127.0.0.1 at 2015-09-27 23:05:36 -0400
+
+
+Started GET "/assets/static_pages.self-ad0774b0d4a2eb199fe1075ce8507ded91a474ec05d3727fabd402c9963534fb.css?body=1" for 127.0.0.1 at 2015-09-27 23:05:36 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-09-27 23:05:36 -0400
+
+
+Started GET "/assets/application.self-5787477d694298d67defd2a9b1b353d559e3508e7b56fd2bda37ade4f627fa9d.css?body=1" for 127.0.0.1 at 2015-09-27 23:05:36 -0400
+
+
+Started GET "/assets/jquery.self-c0aeac38aa941ec2dd88d290485efad29308ca522d2809b14f6e2e4831501937.js?body=1" for 127.0.0.1 at 2015-09-27 23:05:36 -0400
+
+
+Started GET "/assets/jquery_ujs.self-c350adabe6b48fc9194d6944ac444581924e960e313edce9e402db4112830d98.js?body=1" for 127.0.0.1 at 2015-09-27 23:05:36 -0400
+
+
+Started GET "/assets/turbolinks.self-61e1f00548efe71d405b0196fefb00926afa1604f7ae2240e368a5bdd7184144.js?body=1" for 127.0.0.1 at 2015-09-27 23:05:36 -0400
+
+
+Started GET "/assets/comments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-09-27 23:05:36 -0400
+
+
+Started GET "/assets/jquery.raty.self-628421be04f36f7a8fa8b9b884c6d7824d6f8bdeba4f172b131f15aa63f713e8.js?body=1" for 127.0.0.1 at 2015-09-27 23:05:36 -0400
+
+
+Started GET "/assets/payments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-09-27 23:05:36 -0400
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-09-27 23:05:36 -0400
+
+
+Started GET "/assets/site.self-d19c89e62fd3f4c545b251d4f6875d52e73ec33d328d31020556f587a2ce1e4f.js?body=1" for 127.0.0.1 at 2015-09-27 23:05:36 -0400
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-09-27 23:05:36 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-09-27 23:05:36 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-09-27 23:05:36 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2015-09-28 00:29:39 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#landing_page as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" LIMIT 3
+  Rendered static_pages/landing_page.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 582ms (Views: 564.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-09-28 00:29:40 -0400
+
+
+Started GET "/assets/jquery.raty.self-87ed0aee892c20d60b699b233626d04034355bea2c9d0d27b7586c39cb9ba493.css?body=1" for 127.0.0.1 at 2015-09-28 00:29:40 -0400
+
+
+Started GET "/assets/products.self-83dac95e9be72b74efb9b6a6b286a3acc380c8e408e3190d3d558d5a6ec0a61c.css?body=1" for 127.0.0.1 at 2015-09-28 00:29:40 -0400
+
+
+Started GET "/assets/payments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-09-28 00:29:40 -0400
+
+
+Started GET "/assets/scaffolds.self-0835d188e12b4cd85b7a19a850bdeb66768bb2676265da9242b20fbf7e37f9f2.css?body=1" for 127.0.0.1 at 2015-09-28 00:29:40 -0400
+
+
+Started GET "/assets/static_pages.self-ad0774b0d4a2eb199fe1075ce8507ded91a474ec05d3727fabd402c9963534fb.css?body=1" for 127.0.0.1 at 2015-09-28 00:29:40 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-09-28 00:29:40 -0400
+
+
+Started GET "/assets/application.self-5787477d694298d67defd2a9b1b353d559e3508e7b56fd2bda37ade4f627fa9d.css?body=1" for 127.0.0.1 at 2015-09-28 00:29:40 -0400
+
+
+Started GET "/assets/jquery.self-c0aeac38aa941ec2dd88d290485efad29308ca522d2809b14f6e2e4831501937.js?body=1" for 127.0.0.1 at 2015-09-28 00:29:40 -0400
+
+
+Started GET "/assets/jquery_ujs.self-c350adabe6b48fc9194d6944ac444581924e960e313edce9e402db4112830d98.js?body=1" for 127.0.0.1 at 2015-09-28 00:29:40 -0400
+
+
+Started GET "/assets/turbolinks.self-61e1f00548efe71d405b0196fefb00926afa1604f7ae2240e368a5bdd7184144.js?body=1" for 127.0.0.1 at 2015-09-28 00:29:40 -0400
+
+
+Started GET "/assets/comments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-09-28 00:29:40 -0400
+
+
+Started GET "/assets/jquery.raty.self-628421be04f36f7a8fa8b9b884c6d7824d6f8bdeba4f172b131f15aa63f713e8.js?body=1" for 127.0.0.1 at 2015-09-28 00:29:40 -0400
+
+
+Started GET "/assets/payments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-09-28 00:29:40 -0400
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-09-28 00:29:40 -0400
+
+
+Started GET "/assets/site.self-d19c89e62fd3f4c545b251d4f6875d52e73ec33d328d31020556f587a2ce1e4f.js?body=1" for 127.0.0.1 at 2015-09-28 00:29:40 -0400
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-09-28 00:29:40 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-09-28 00:29:40 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-09-28 00:29:40 -0400
+
+
+Started GET "/login" for 127.0.0.1 at 2015-09-28 00:29:52 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (2.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (51.2ms)
+Completed 200 OK in 170ms (Views: 140.3ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2015-09-28 00:30:13 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AHmV60nzrqn9MBuU3wSP9Mwkfe4ofNL8u7wsBmvtx1N8hp2+fykYnM34cUuGRtuRKx37vpOLgj57hE7LpwNesw==", "user"=>{"email"=>"bradley@careerfoundrysucks.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "bradley@careerfoundrysucks.com"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2015-09-27 19:21:44.952110"], ["current_sign_in_at", "2015-09-28 04:30:13.671157"], ["sign_in_count", 17], ["updated_at", "2015-09-28 04:30:13.672594"], ["id", 3]]
+  [1m[35m (108.4ms)[0m  commit transaction
+Redirected to http://localhost:3000/products
+Completed 302 Found in 617ms (ActiveRecord: 109.3ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-09-28 00:30:13 -0400
+DEPRECATION WARNING: `#deliver` is deprecated and will be removed in Rails 5. Use `#deliver_now` to deliver immediately or `#deliver_later` to deliver through Active Job. (called from <class:ProductsController> at /home/kenny/rubystack-2.2.2-3/linux_bike/app/controllers/products_controller.rb:8)
+
+ActionMailer::Base#mail: processed outbound mail in 232.6ms
+
+Sent mail to to@domain.com (389.3ms)
+Date: Mon, 28 Sep 2015 00:30:14 -0400
+From: from@domain.com
+To: to@domain.com
+Message-ID: <5608c2561231c_12ed3f8f7e1a8054169f6@kenny-N56VM.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+I am the email body.
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mProduct Load (0.4ms)[0m  SELECT  "products".* FROM "products" LIMIT 5 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "products"[0m
+  Rendered products/_product.html.erb (6.9ms)
+  Rendered products/index.html.erb within layouts/application (27.5ms)
+Completed 200 OK in 153ms (Views: 145.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2015-09-28 00:30:19 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (0.4ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.2ms)[0m  SELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 1]]
+  Rendered shared/_stripe_checkout_button.html.erb (1.0ms)
+  Rendered products/_new_comment.html.erb (26.9ms)
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ?  ORDER BY created_at DESC LIMIT 3 OFFSET 0[0m  [["product_id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered products/_list_comments.html.erb (11.9ms)
+  Rendered products/show.html.erb within layouts/application (60.2ms)
+Completed 200 OK in 237ms (Views: 159.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/star-off.png" for 127.0.0.1 at 2015-09-28 00:30:19 -0400
+
+
+Started GET "/assets/star-on.png" for 127.0.0.1 at 2015-09-28 00:30:19 -0400
+
+
+Started GET "/square-image.png" for 127.0.0.1 at 2015-09-28 00:30:22 -0400
+
+ActionController::RoutingError (No route matches [GET] "/square-image.png"):
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:13:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (8.3ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (9.3ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (3.4ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (2.2ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (125.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-09-28 00:30:52 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#landing_page as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" LIMIT 3
+  Rendered static_pages/landing_page.html.erb within layouts/application (16.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 606ms (Views: 583.3ms | ActiveRecord: 1.5ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2015-09-28 00:30:56 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"0wltES2xwCPz2ipoXpIOqSp4EJansgXIHa+lnRv0bGwCp4JKo+IeybKHC4ncIrc/kjqPuoQZU6muazwo3qhwcw=="}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 29ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-09-28 00:30:56 -0400
+Processing by StaticPagesController#landing_page as HTML
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" LIMIT 3[0m
+  Rendered static_pages/landing_page.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 188ms (Views: 186.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2015-09-28 00:30:59 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (4.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (79.1ms)
+Completed 200 OK in 271ms (Views: 265.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2015-09-28 00:31:08 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QYxmsNlMSe/cYQ2HNEqcGedOLekl9mBXIKpW04pQyhEiptCS4yJv+ygWv/BZg5Zq/KEegEAUMdCraerfU3jhzA==", "user"=>{"email"=>"johnhsmith@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "johnhsmith@example.com"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2015-09-21 20:38:11.876947"], ["current_sign_in_at", "2015-09-28 04:31:08.409167"], ["sign_in_count", 6], ["updated_at", "2015-09-28 04:31:08.410456"], ["id", 6]]
+  [1m[36m (104.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/products
+Completed 302 Found in 478ms (ActiveRecord: 105.7ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-09-28 00:31:08 -0400
+DEPRECATION WARNING: `#deliver` is deprecated and will be removed in Rails 5. Use `#deliver_now` to deliver immediately or `#deliver_later` to deliver through Active Job. (called from <class:ProductsController> at /home/kenny/rubystack-2.2.2-3/linux_bike/app/controllers/products_controller.rb:8)
+
+ActionMailer::Base#mail: processed outbound mail in 254.3ms
+
+Sent mail to to@domain.com (295.9ms)
+Date: Mon, 28 Sep 2015 00:31:08 -0400
+From: from@domain.com
+To: to@domain.com
+Message-ID: <5608c28ccb6fa_13263fce392e2cf49de@kenny-N56VM.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+I am the email body.
+Processing by ProductsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" LIMIT 5 OFFSET 0[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "products"
+  Rendered products/_product.html.erb (5.0ms)
+  Rendered products/index.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 111ms (Views: 105.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/6" for 127.0.0.1 at 2015-09-28 00:31:15 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered users/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 137ms (Views: 111.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/6" for 127.0.0.1 at 2015-09-28 00:31:33 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Completed 401 Unauthorized in 8ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/users/6" for 127.0.0.1 at 2015-09-28 00:31:33 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2015-09-28 00:31:33 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 168ms (Views: 165.6ms | ActiveRecord: 0.0ms)

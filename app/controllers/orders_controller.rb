@@ -13,6 +13,12 @@ class OrdersController < ApplicationController
     end
     
     def show
+      @orders = Orders.all  
+    
+    end
+
+    def confirm
+        #code
     end
     
 end

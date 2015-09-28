@@ -15,6 +15,9 @@ class PaymentsController < ApplicationController
         :currency => "usd",
         :source => token,
         :description => params[:stripeEmail]
+        
+        
+        
     )
     rescue Stripe::CardError => e
     # The card has been declined
@@ -32,7 +35,7 @@ class PaymentsController < ApplicationController
      
       flash[:error] = "Unfortunately, there was an error processing your payment: #{err[:message]}"
     end
-    
+    #redirect to order confirm eventually
     redirect_to product_path(@product)
   end
 end

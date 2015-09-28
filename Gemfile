@@ -66,6 +66,9 @@ group :development, :test do
   # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 
+#security
+gem "brakeman", :require => false
+
 #factory girl
 gem "factory_girl_rails", "~> 4.0"
 
