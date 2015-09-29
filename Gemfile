@@ -31,9 +31,19 @@ gem 'will_paginate'
 #authorization
 gem 'cancancan'
 
+#newest version of compass rails to solve dumb updates
+gem "compass-rails", github: "Compass/compass-rails", branch: "master"
+
 #readable tables in console
 gem 'hirb'
 
+ #jquery plugins
+  gem 'chosen-rails'
+  
+  gem 'fancybox2-rails', '~> 0.2.8'
+  
+  
+  
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -51,6 +61,10 @@ group :production do
   gem 'pg'
    gem 'rails_12factor'
 end
+
+
+ 
+
 
 
 group :development, :test do
