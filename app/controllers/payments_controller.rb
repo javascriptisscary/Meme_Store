@@ -14,11 +14,10 @@ class PaymentsController < ApplicationController
         :amount => @product.price, # amount in cents, again
         :currency => "usd",
         :source => token,
-        :description => params[:stripeEmail],
-        
-        
-        
-    )
+        :description => params[:stripeEmail]
+        )
+      
+      
       
       @order = Order.create(id: 1, user_id: @user, product_id: @product.id, total: @product.price)
       @order.save
