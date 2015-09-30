@@ -1,7 +1,7 @@
 <script
   src="https://checkout.stripe.com/checkout.js" class="stripe-button"
   data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-  data-image="/square-image.png"
+  data-image="http://cdn.jaxov.com/wp-content/uploads/2012/02/Y-U-NO-Guy-Meme-Face-300x300.jpg"
   data-name="<%= @product.name %>"
   data-description="<%= @product.description %>"
   data-amount="<%= @product.price %>">
