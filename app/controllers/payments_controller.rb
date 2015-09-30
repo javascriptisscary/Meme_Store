@@ -38,9 +38,6 @@ class PaymentsController < ApplicationController
   end
    
    
-   happy = charge.id
-        logger.debug "charge id = #{happy}"
-   
    
    
 end
