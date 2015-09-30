@@ -6003,3 +6003,105 @@ Completed 200 OK in 44ms (Views: 14.4ms | ActiveRecord: 0.5ms)
   [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
   [1m[35m (0.1ms)[0m  begin transaction
   [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (97.2ms)[0m  [1mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "body" text, "rating" integer, "product_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.3ms)[0m  select sqlite_version(*)
+  [1m[36m (98.3ms)[0m  [1mCREATE  INDEX "index_comments_on_product_id" ON "comments" ("product_id")[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_product_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_product_id' AND type='index'
+
+  [1m[36m (106.4ms)[0m  [1mCREATE  INDEX "index_comments_on_user_id" ON "comments" ("user_id")[0m
+  [1m[35m (106.2ms)[0m  CREATE TABLE "orders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "product_id" integer, "total" float, "order_id" varchar) 
+  [1m[36m (90.4ms)[0m  [1mCREATE  INDEX "index_orders_on_product_id" ON "orders" ("product_id")[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_orders_on_product_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_orders_on_product_id' AND type='index'
+
+  [1m[36m (82.1ms)[0m  [1mCREATE  INDEX "index_orders_on_user_id" ON "orders" ("user_id")[0m
+  [1m[35m (81.9ms)[0m  CREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "image_url" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "color" varchar, "size" varchar, "price" varchar) 
+  [1m[36m (85.6ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar, "last_name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "admin" boolean DEFAULT 'f' NOT NULL) [0m
+  [1m[35m (89.4ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (81.1ms)[0m  CREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")
+  [1m[36m (106.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (106.7ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (106.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150929213956')
+  [1m[36m (83.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150916171804')[0m
+  [1m[35m (82.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150821012418')
+  [1m[36m (83.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150909201730')[0m
+  [1m[35m (83.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150923160819')
+  [1m[36m (91.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150817200904')[0m
+  [1m[35m (82.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150820163914')
+  [1m[36m (109.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150902051447')[0m
+  [1m[35m (91.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150915184355')
+  [1m[36m (83.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150909200545')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+Processing by StaticPagesController#index as HTML
+  Rendered static_pages/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 81ms (Views: 59.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by StaticPagesController#index as HTML
+  Rendered static_pages/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 401 Unauthorized in 20ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "email", "encrypted_password", "id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "John"], ["last_name", "Doe"], ["email", "example@example.com"], ["encrypted_password", "$2a$04$qrvZkA6/IzcgigOc7INNnuerzuug3c.lreHLlm1KL32pO0ZT0z0vK"], ["id", 10], ["created_at", "2015-09-30 16:59:53.558992"], ["updated_at", "2015-09-30 16:59:53.558992"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 10]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
+  Rendered users/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 53ms (Views: 13.8ms | ActiveRecord: 0.6ms)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'example@example.com' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "John"], ["last_name", "Doe"], ["email", "example@example.com"], ["encrypted_password", "$2a$04$Eb6o.SKzPNP0g/OkxcQDc.GBJxZPJpURbXG09TXSTWqys6AKhYtp."], ["created_at", "2015-09-30 16:59:53.647523"], ["updated_at", "2015-09-30 16:59:53.647523"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "products" ("name", "image_url", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "funny meme"], ["image_url", "http://s2.quickmeme.com/img/c9/c994561a97196e69fbd2c11d1cf53f375fb098aaea8abf0b9701b8a5c6bb8a83.jpg"], ["created_at", "2015-09-30 16:59:53.660994"], ["updated_at", "2015-09-30 16:59:53.660994"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "comments" ("rating", "user_id", "body", "product_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["rating", 1], ["user_id", 1], ["body", "Awful meme!"], ["product_id", 1], ["created_at", "2015-09-30 16:59:53.742475"], ["updated_at", "2015-09-30 16:59:53.742475"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "comments" ("rating", "user_id", "body", "product_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["rating", 3], ["user_id", 1], ["body", "Avg meme!"], ["product_id", 1], ["created_at", "2015-09-30 16:59:53.746151"], ["updated_at", "2015-09-30 16:59:53.746151"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "comments" ("rating", "user_id", "body", "product_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["rating", 5], ["user_id", 1], ["body", "Great meme!"], ["product_id", 1], ["created_at", "2015-09-30 16:59:53.749252"], ["updated_at", "2015-09-30 16:59:53.749252"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 1]]
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction

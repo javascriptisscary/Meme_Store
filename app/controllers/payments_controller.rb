@@ -19,10 +19,10 @@ class PaymentsController < ApplicationController
       
       
       
-      @order = Order.create(id: 1, user_id: @user, product_id: @product.id, total: @product.price)
+      @order = Order.create(user_id: @user, product_id: @product.id, total: @product.price)
       @order.save
 
-    
+    puts "I'm working! Here is the order price #{@order.total}"
      
       
     rescue Stripe::CardError => e
@@ -33,7 +33,7 @@ class PaymentsController < ApplicationController
       flash[:error] = "Unfortunately, there was an error processing your payment: #{err[:message]}"
     end
     #redirect to order confirm eventually
-    redirect_to user_path(@user)
+    redirect_to product_path(product)
     
   end
    
