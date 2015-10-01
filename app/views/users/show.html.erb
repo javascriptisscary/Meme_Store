@@ -14,5 +14,7 @@
   <strong>Email Address </strong>
   <%= @user.email %>
 </p>
+
+<p> <%= link_to 'Your Orders', orders_path %> </p>
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>

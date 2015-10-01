@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   
  
   
-  post '/orders/create'
+  post '/payments/create'
   
 
   post 'static_pages/thank_you'

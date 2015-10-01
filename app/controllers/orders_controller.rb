@@ -1,24 +1,24 @@
 class OrdersController < ApplicationController
     protect_from_forgery except: :index
-    def new()
-        @order =Order.new
-    end
+   before_filter :authenticate_user!
+   
+   
+
     
-    def create()
-         
-    end
-    
-    def index()
+  def index()
+       
         @orders = Order.all
-    end
+        
+  end
     
-    def show
-      @orders = Order.all  
-    
+  
+
+
+private
+
+    def product_params
+     params.require(:order).permit(:id, :user_id, :product_id, :total, :order_id)
+
     end
 
-    def confirm
-        #code
-    end
-    
 end

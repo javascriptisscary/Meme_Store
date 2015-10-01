@@ -1,1 +1,27 @@
-I'm the orders home page!
+<p id="notice"><%= notice %></p>
+
+<h1>Your orders</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>User</th>
+      <th>Product</th>
+      <th>Total</th>
+      <th>Order ID</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% current_user.orders.each do |order| %>
+  <%= render order %>
+<% end %>
+      
+  </tbody>
+</table>
+
+<br>
+
+

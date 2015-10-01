@@ -1,8 +1,9 @@
 class PaymentsController < ApplicationController
   def create
-    @product = Product.find(params[:product_id])
-    @user = User.find(params[:user_id])
     token = params[:stripeToken]
+    @product = Product.find(params[:product_id])
+    @user = current_user
+    
    
    
 
@@ -18,22 +19,30 @@ class PaymentsController < ApplicationController
         )
       
       
-      # for some reason this code never runs
-      @order = Order.create(user_id: @user, product_id: @product.id, total: @product.price)
+      if (charge.paid == true)
+      @order = Order.create(user_id: @user.id, product_id: @product.id, total: @product.price, order_id: charge.id)
       @order.save
+      end
+      
 
-    puts "I'm working! Here is the order price #{@order.total}"
      
       
     rescue Stripe::CardError => e
     # The card has been declined
       body = e.json_body
       err = body[:error]
+      
+      puts "Status is: #{e.http_status}"
+      puts "Type is: #{err[:type]}"
+      puts "Code is: #{err[:code]}"
+      # param is '' in this case
+      puts "Param is: #{err[:param]}"
+      puts "Message is: #{err[:message]}"
      
       flash[:error] = "Unfortunately, there was an error processing your payment: #{err[:message]}"
+   
     end
-    #redirect to order confirm eventually
-    redirect_to product_path(product)
+   
     
   end
    

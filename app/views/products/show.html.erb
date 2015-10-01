@@ -20,7 +20,8 @@
   <%=@product.cents_to_dollars(@product.price)%>
 </p>
 <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
-<div class="pay-button"><%= form_tag "/orders/create" do %>
+<div class="pay-button"><%= form_tag "/payments/create" do %>
+  <%= hidden_field_tag :product_id, @product.id %>
   <%= render partial: "shared/stripe_checkout_button" %>
 <% end %></div>
 <%= render 'new_comment' %>

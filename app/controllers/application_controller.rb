@@ -20,4 +20,12 @@ class ApplicationController < ActionController::Base
   redirect_to main_app.root_url, :alert => exception.message
   end
 
+  def authorize_admin
+    if current_user.admin ==false
+        flash[:notice] = "You are not allowed access to this page."
+        redirect_to root_path
+    end
+    
+  end
+  
 end
