@@ -18,7 +18,7 @@ class PaymentsController < ApplicationController
         )
       
       
-      
+      # for some reason this code never runs
       @order = Order.create(user_id: @user, product_id: @product.id, total: @product.price)
       @order.save
 

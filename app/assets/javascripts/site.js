@@ -1,5 +1,7 @@
-$(document).on('page:change', function(){
-    $('a.fancybox').fancybox({ parent: "body"});
+
+//for reuse raty
+function ratings(){
+    
     $('.rating').raty( { path: '/assets', scoreName: 'comment[rating]' });
     $('.rated').raty({ path: '/assets', readOnly: true,
       score: function() {
@@ -8,5 +10,12 @@ $(document).on('page:change', function(){
       
     });
     
+};
+
+
+$(document).on('page:change', function(){
+$('a.fancybox').fancybox({ parent: "body"});
+//call ratings
+ratings();
 });
 
