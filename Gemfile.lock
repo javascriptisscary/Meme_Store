@@ -92,6 +92,7 @@ GEM
       sass (>= 3.3.0, < 3.5)
     compass-import-once (1.0.5)
       sass (>= 3.2, < 3.5)
+    dalli (2.7.4)
     debug_inspector (0.0.2)
     devise (3.5.2)
       bcrypt (~> 3.0)
@@ -315,6 +316,7 @@ DEPENDENCIES
   chosen-rails
   coffee-rails (~> 4.1.0)
   compass-rails!
+  dalli
   devise
   factory_girl_rails (~> 4.0)
   fancybox2-rails (~> 0.2.8)

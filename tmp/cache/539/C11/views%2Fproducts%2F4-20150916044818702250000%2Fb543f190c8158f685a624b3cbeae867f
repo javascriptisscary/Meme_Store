@@ -1,0 +1,9 @@
+o: ActiveSupport::Cache::Entry:@valueI"B         <tr>
+          <td>ladeda</td>
+          <td>haha</td>
+          <td></td>
+          <td><a href="/products/4">Show</a></td>
+          <td><a href="/products/4/edit">Edit</a></td>
+          <td><a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/products/4">Destroy</a></td>
+         </tr>
+:ET:@created_atf1444156479.944129:@expires_in0

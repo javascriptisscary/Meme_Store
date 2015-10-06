@@ -1,0 +1,9 @@
+o: ActiveSupport::Cache::Entry:@valueI";         <tr>
+          <td>Gun</td>
+          <td></td>
+          <td></td>
+          <td><a href="/products/5">Show</a></td>
+          <td><a href="/products/5/edit">Edit</a></td>
+          <td><a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/products/5">Destroy</a></td>
+         </tr>
+:ET:@created_atf1444156479.9500036:@expires_in0

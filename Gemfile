@@ -42,6 +42,9 @@ gem 'hirb'
   
   gem 'fancybox2-rails', '~> 0.2.8'
   
+  #caching
+gem 'dalli'
+  
   
   
 # Use ActiveModel has_secure_password
@@ -96,5 +99,7 @@ gem 'guard-rspec', require: false
 gem 'spork-rails'
 
 gem 'guard-spork'
+
+
 end
 
