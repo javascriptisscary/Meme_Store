@@ -45,7 +45,7 @@ gem 'hirb'
   #caching
 gem 'dalli'
   
-gem 'redis-rails'
+
 
 gem 'newrelic_rpm'
   
