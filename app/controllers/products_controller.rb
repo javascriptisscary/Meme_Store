@@ -1,26 +1,29 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
-  before_filter :authenticate_user!
+  
   # GET /products
   # GET /products.json
   
 
   
   def index
+    
     if params[:q]
       search_term = params[:q]
       @products = Product.where("name LIKE ?", "%#{search_term}%")
     else
       @products = Product.all
-      @products = Product.all.paginate(page: params[:page], per_page: 5)
+      
       
     end
   end
+
 
   # GET /products/1
   # GET /products/1.json
   def show
     @user = current_user
+    authorize! :read, @user
     @comments = @product.comments.order("created_at DESC")
     @comments = @product.comments.all.order("created_at DESC").paginate(page: params[:page], per_page: 3) 
   end

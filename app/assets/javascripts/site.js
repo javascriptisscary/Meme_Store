@@ -14,6 +14,11 @@ function ratings(){
 
 
 $(document).on('page:change', function(){
+$(".products").hover(function() {
+    $(this).css("border", "3px solid red" );
+}, function() {
+    $(this).css("border", "3px solid black");
+});
 $('a.fancybox').fancybox({ parent: "body"});
 //call ratings
 ratings();

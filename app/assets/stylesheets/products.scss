@@ -30,3 +30,49 @@ table thead tr {
     
 }
 
+
+.container-responsive {
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+#products_jumbo {
+    font-family: "Shadows Into Light","Helvetica Neue",Helvetica,Arial,sans-serif;
+-webkit-box-shadow: -10px 2px 75px 5px rgba(0,0,0,0.75);
+-moz-box-shadow: -10px 2px 75px 5px rgba(0,0,0,0.75);
+box-shadow: -10px 2px 75px 5px rgba(0,0,0,0.75);
+text-align: center;
+margin-bottom:10%;
+
+}
+
+#featured {
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid black;
+    -webkit-box-shadow: -10px 2px 75px 5px rgba(0,0,0,0.75);
+-moz-box-shadow: -10px 2px 75px 5px rgba(0,0,0,0.75);
+box-shadow: -10px 2px 75px 5px rgba(0,0,0,0.75);
+}
+
+#products_contain {
+    font-family: "Shadows Into Light","Helvetica Neue",Helvetica,Arial,sans-serif;
+    background: white;
+    border-top: 8px gray solid;
+ 
+}
+
+#products_contain h1 {
+    margin-bottom: 5%;
+    font-size: 4em;
+}
+
+.products {
+    margin: 4% auto;
+    border: 1px black solid;
+    -webkit-box-shadow: -10px 2px 75px 5px rgba(0,0,0,0.75);
+-moz-box-shadow: -10px 2px 75px 5px rgba(0,0,0,0.75);
+box-shadow: -10px 2px 75px 5px rgba(0,0,0,0.75);
+    
+}

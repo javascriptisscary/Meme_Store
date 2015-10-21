@@ -18,11 +18,42 @@
  
  */
 
+.navbar {
+    background-color: #93B1C6;
+ border-bottom: 1px solid gray;
+font-family: 'Shadows Into Light', "Helvetica Neue",Helvetica,Arial,sans-serif;
+
+}
+
+.navbar-header {
+    
+    background-color:black;
+}
+
+.navbar-header a {
+    font-size: 3em;
+}
+
+#brand {
+    margin-left:0;
+    color:white;
+    text-shadow: 1px 1px orange;
+}
 
 
+.navbar-brand a{
+color:white;        
+    }
+    
+}
 #search {
     padding-top: 15px;
     
+    
+}
+
+li {
+    font-family: 'Special Elite', "Helvetica Neue",Helvetica,Arial,sans-serif;
     
 }
 

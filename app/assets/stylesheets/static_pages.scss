@@ -3,6 +3,40 @@
    
 }
 
+#main_jumbo {
+    font-family: "Shadows Into Light","Helvetica Neue",Helvetica,Arial,sans-serif;
+    text-align: center;
+    color: #FF7148;
+    -webkit-box-shadow: -10px 2px 75px 5px rgba(0,0,0,0.75);
+-moz-box-shadow: -10px 2px 75px 5px rgba(0,0,0,0.75);
+box-shadow: -10px 2px 75px 5px rgba(0,0,0,0.75);
+background: #FFFFFF image-url("noise_jumbo.png");
+padding-top:20px;
+border: 1px black solid;
+
+}
+
+
+#main_jumbo h1 {
+    text-decoration: underline;
+   text-shadow: 2px 2px black;
+   font-size: 7.5em;
+   margin-top:0;
+}
+
+#main_jumbo h2 {
+    color: #EC583A;
+    margin-top:4%;
+    margin-bottom:2%;
+}
+
+
+.btn-primary {
+    font-size: 1.5em;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    float: right;
+}
+
 .image {
     border: 4px black solid;
     
