@@ -57645,3 +57645,616 @@ Started GET "/assets/application-770553faff71779b8d86c201bd836133.js?body=1" for
 
 
 Started GET "/assets/noise-69c2feb72841d4d44674d35841d4406a.png" for 127.0.0.1 at 2015-10-27 17:08:16 -0400
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2015-10-27 18:58:38 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"5fdP7UfisDfBUAcMb/HndtkT/490YNBxDQUGjk9p090JKLQW1yWj427bTBCBHRwJjOQD33kzEnXFaxmh6jBDXg=="}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-27 18:58:38 -0400
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 345ms (Views: 343.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application-dd2e71deba212e714b082b174dbe69a0.css?body=1" for 127.0.0.1 at 2015-10-27 18:58:39 -0400
+
+
+Started GET "/assets/jquery.fancybox-d2ea8617c23f8b447bd1111bc2c54d54.css?body=1" for 127.0.0.1 at 2015-10-27 18:58:39 -0400
+
+
+Started GET "/assets/jquery.fancybox-buttons-772a0455ab04e6570e8474f35b3d84a7.css?body=1" for 127.0.0.1 at 2015-10-27 18:58:39 -0400
+
+
+Started GET "/assets/comments-2be930bcbfd3c3e00190e2193dda5c7c.css?body=1" for 127.0.0.1 at 2015-10-27 18:58:39 -0400
+
+
+Started GET "/assets/jquery.fancybox-thumbs-311dd398c2f9abd0e404bd841a45bf80.css?body=1" for 127.0.0.1 at 2015-10-27 18:58:39 -0400
+
+
+Started GET "/assets/jquery.raty-0d2d2f85471d50f28f9270d2b3fbccab.css?body=1" for 127.0.0.1 at 2015-10-27 18:58:39 -0400
+
+
+Started GET "/assets/fancybox-31154555c2bff5c0971ff94c05133a0f.css?body=1" for 127.0.0.1 at 2015-10-27 18:58:39 -0400
+
+
+Started GET "/assets/payments-2be930bcbfd3c3e00190e2193dda5c7c.css?body=1" for 127.0.0.1 at 2015-10-27 18:58:39 -0400
+
+
+Started GET "/assets/products-d51122189c3bfbce185b17474923942d.css?body=1" for 127.0.0.1 at 2015-10-27 18:58:39 -0400
+
+
+Started GET "/assets/scaffolds-0419717c04d69db1dafb3d5cbf5afb64.css?body=1" for 127.0.0.1 at 2015-10-27 18:58:39 -0400
+
+
+Started GET "/assets/static_pages-45550cf5946f9f89231f7c63940976be.css?body=1" for 127.0.0.1 at 2015-10-27 18:58:39 -0400
+
+
+Started GET "/assets/users-2be930bcbfd3c3e00190e2193dda5c7c.css?body=1" for 127.0.0.1 at 2015-10-27 18:58:39 -0400
+
+
+Started GET "/assets/chosen-32dfab8f477a01578769cda9f1651231.css?body=1" for 127.0.0.1 at 2015-10-27 18:58:39 -0400
+
+
+Started GET "/assets/jquery-4075e3b7b3964707c653f61b66f46dec.js?body=1" for 127.0.0.1 at 2015-10-27 18:58:39 -0400
+
+
+Started GET "/assets/jquery_ujs-f9f4ae336c0d19804775e0e2c8749423.js?body=1" for 127.0.0.1 at 2015-10-27 18:58:39 -0400
+
+
+Started GET "/assets/turbolinks-4031cb0a0613adc8fac596d20e01b074.js?body=1" for 127.0.0.1 at 2015-10-27 18:58:39 -0400
+
+
+Started GET "/assets/comments-0bc27e2168727cafa1252f703137df60.js?body=1" for 127.0.0.1 at 2015-10-27 18:58:39 -0400
+
+
+Started GET "/assets/jquery.raty-a381d4d252d0b3e93d67de409f24a2eb.js?body=1" for 127.0.0.1 at 2015-10-27 18:58:39 -0400
+
+
+Started GET "/assets/payments-0bc27e2168727cafa1252f703137df60.js?body=1" for 127.0.0.1 at 2015-10-27 18:58:39 -0400
+
+
+Started GET "/assets/products-0bc27e2168727cafa1252f703137df60.js?body=1" for 127.0.0.1 at 2015-10-27 18:58:39 -0400
+
+
+Started GET "/assets/scaffold-b8bdb1b56ac8623dd53498b57a53746a.js?body=1" for 127.0.0.1 at 2015-10-27 18:58:39 -0400
+
+
+Started GET "/assets/site-51d39b214e4c9c23c2154c4f960420ca.js?body=1" for 127.0.0.1 at 2015-10-27 18:58:39 -0400
+
+
+Started GET "/assets/static_pages-0bc27e2168727cafa1252f703137df60.js?body=1" for 127.0.0.1 at 2015-10-27 18:58:39 -0400
+
+
+Started GET "/assets/users-0bc27e2168727cafa1252f703137df60.js?body=1" for 127.0.0.1 at 2015-10-27 18:58:39 -0400
+
+
+Started GET "/assets/lib/abstract-chosen-cebdd952962a5b26fafc957a19c1ed8b.js?body=1" for 127.0.0.1 at 2015-10-27 18:58:39 -0400
+
+
+Started GET "/assets/lib/select-parser-5947b1b37cc43a76175bf24dd98c2d30.js?body=1" for 127.0.0.1 at 2015-10-27 18:58:39 -0400
+
+
+Started GET "/assets/chosen.jquery-63805af9dffabd503fde60fb7af95b26.js?body=1" for 127.0.0.1 at 2015-10-27 18:58:39 -0400
+
+
+Started GET "/assets/chosen-jquery-a9ee3be772d621557c08693522928162.js?body=1" for 127.0.0.1 at 2015-10-27 18:58:39 -0400
+
+
+Started GET "/assets/jquery.fancybox-04046b98b419175e25ba73d58e983a2e.js?body=1" for 127.0.0.1 at 2015-10-27 18:58:39 -0400
+
+
+Started GET "/assets/jquery.fancybox-buttons-08e63f315809680432dc8970a79171c1.js?body=1" for 127.0.0.1 at 2015-10-27 18:58:39 -0400
+
+
+Started GET "/assets/jquery.fancybox-thumbs-10999e7566e7c2cb47826582d02bf02a.js?body=1" for 127.0.0.1 at 2015-10-27 18:58:39 -0400
+
+
+Started GET "/assets/jquery.fancybox-media-f11aa38339158f728e8fffc3128e9b88.js?body=1" for 127.0.0.1 at 2015-10-27 18:58:39 -0400
+
+
+Started GET "/assets/fancybox-569b667a1af429c2835f5639e98b51ad.js?body=1" for 127.0.0.1 at 2015-10-27 18:58:39 -0400
+
+
+Started GET "/assets/application-770553faff71779b8d86c201bd836133.js?body=1" for 127.0.0.1 at 2015-10-27 18:58:39 -0400
+
+
+Started GET "/assets/noise-69c2feb72841d4d44674d35841d4406a.png" for 127.0.0.1 at 2015-10-27 18:58:39 -0400
+
+
+Started GET "/products/3" for 127.0.0.1 at 2015-10-27 18:58:43 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered products/show.html.erb within layouts/application (3.6ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.2ms)
+
+SyntaxError (/home/kenny/rubystack-2.2.2-3/linux_bike/app/views/products/show.html.erb:46: syntax error, unexpected keyword_ensure, expecting keyword_end
+/home/kenny/rubystack-2.2.2-3/linux_bike/app/views/products/show.html.erb:48: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/products/show.html.erb:46: syntax error, unexpected keyword_ensure, expecting keyword_end
+  app/views/products/show.html.erb:48: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (18.1ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (35.6ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (79.7ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (29.5ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (57.2ms)
+
+
+Started GET "/products/3" for 127.0.0.1 at 2015-10-27 18:58:43 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered products/show.html.erb within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.1ms)
+
+SyntaxError (/home/kenny/rubystack-2.2.2-3/linux_bike/app/views/products/show.html.erb:46: syntax error, unexpected keyword_ensure, expecting keyword_end
+/home/kenny/rubystack-2.2.2-3/linux_bike/app/views/products/show.html.erb:48: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/products/show.html.erb:46: syntax error, unexpected keyword_ensure, expecting keyword_end
+  app/views/products/show.html.erb:48: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (17.4ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.3ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.7ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (55.9ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (29.1ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /home/kenny/rubystack-2.2.2-3/ruby/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (56.6ms)
+
+
+Started GET "/products/3" for 127.0.0.1 at 2015-10-27 18:59:08 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.2ms)[0m  [1mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 3]]
+  Rendered products/_new_comment.html.erb (1.0ms)
+  [1m[35mComment Load (0.2ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ?  ORDER BY created_at DESC LIMIT 3 OFFSET 0  [["product_id", 3]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered products/_list_comments.html.erb (8.7ms)
+  Rendered products/show.html.erb within layouts/application (19.5ms)
+Completed 200 OK in 368ms (Views: 361.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/jquery.fancybox-d2ea8617c23f8b447bd1111bc2c54d54.css?body=1" for 127.0.0.1 at 2015-10-27 18:59:08 -0400
+
+
+Started GET "/assets/fancybox-31154555c2bff5c0971ff94c05133a0f.css?body=1" for 127.0.0.1 at 2015-10-27 18:59:09 -0400
+
+
+Started GET "/assets/comments-2be930bcbfd3c3e00190e2193dda5c7c.css?body=1" for 127.0.0.1 at 2015-10-27 18:59:09 -0400
+
+
+Started GET "/assets/jquery.fancybox-buttons-772a0455ab04e6570e8474f35b3d84a7.css?body=1" for 127.0.0.1 at 2015-10-27 18:59:09 -0400
+
+
+Started GET "/assets/jquery.fancybox-thumbs-311dd398c2f9abd0e404bd841a45bf80.css?body=1" for 127.0.0.1 at 2015-10-27 18:59:09 -0400
+
+
+Started GET "/assets/application-dd2e71deba212e714b082b174dbe69a0.css?body=1" for 127.0.0.1 at 2015-10-27 18:59:09 -0400
+
+
+Started GET "/assets/jquery.raty-0d2d2f85471d50f28f9270d2b3fbccab.css?body=1" for 127.0.0.1 at 2015-10-27 18:59:09 -0400
+
+
+Started GET "/assets/payments-2be930bcbfd3c3e00190e2193dda5c7c.css?body=1" for 127.0.0.1 at 2015-10-27 18:59:09 -0400
+
+
+Started GET "/assets/products-d51122189c3bfbce185b17474923942d.css?body=1" for 127.0.0.1 at 2015-10-27 18:59:09 -0400
+
+
+Started GET "/assets/scaffolds-0419717c04d69db1dafb3d5cbf5afb64.css?body=1" for 127.0.0.1 at 2015-10-27 18:59:09 -0400
+
+
+Started GET "/assets/static_pages-45550cf5946f9f89231f7c63940976be.css?body=1" for 127.0.0.1 at 2015-10-27 18:59:09 -0400
+
+
+Started GET "/assets/users-2be930bcbfd3c3e00190e2193dda5c7c.css?body=1" for 127.0.0.1 at 2015-10-27 18:59:09 -0400
+
+
+Started GET "/assets/jquery-4075e3b7b3964707c653f61b66f46dec.js?body=1" for 127.0.0.1 at 2015-10-27 18:59:09 -0400
+
+
+Started GET "/assets/chosen-32dfab8f477a01578769cda9f1651231.css?body=1" for 127.0.0.1 at 2015-10-27 18:59:09 -0400
+
+
+Started GET "/assets/jquery_ujs-f9f4ae336c0d19804775e0e2c8749423.js?body=1" for 127.0.0.1 at 2015-10-27 18:59:09 -0400
+
+
+Started GET "/assets/turbolinks-4031cb0a0613adc8fac596d20e01b074.js?body=1" for 127.0.0.1 at 2015-10-27 18:59:09 -0400
+
+
+Started GET "/assets/comments-0bc27e2168727cafa1252f703137df60.js?body=1" for 127.0.0.1 at 2015-10-27 18:59:09 -0400
+
+
+Started GET "/assets/jquery.raty-a381d4d252d0b3e93d67de409f24a2eb.js?body=1" for 127.0.0.1 at 2015-10-27 18:59:09 -0400
+
+
+Started GET "/assets/payments-0bc27e2168727cafa1252f703137df60.js?body=1" for 127.0.0.1 at 2015-10-27 18:59:09 -0400
+
+
+Started GET "/assets/products-0bc27e2168727cafa1252f703137df60.js?body=1" for 127.0.0.1 at 2015-10-27 18:59:09 -0400
+
+
+Started GET "/assets/scaffold-b8bdb1b56ac8623dd53498b57a53746a.js?body=1" for 127.0.0.1 at 2015-10-27 18:59:09 -0400
+
+
+Started GET "/assets/site-51d39b214e4c9c23c2154c4f960420ca.js?body=1" for 127.0.0.1 at 2015-10-27 18:59:09 -0400
+
+
+Started GET "/assets/static_pages-0bc27e2168727cafa1252f703137df60.js?body=1" for 127.0.0.1 at 2015-10-27 18:59:09 -0400
+
+
+Started GET "/assets/users-0bc27e2168727cafa1252f703137df60.js?body=1" for 127.0.0.1 at 2015-10-27 18:59:09 -0400
+
+
+Started GET "/assets/lib/abstract-chosen-cebdd952962a5b26fafc957a19c1ed8b.js?body=1" for 127.0.0.1 at 2015-10-27 18:59:09 -0400
+
+
+Started GET "/assets/lib/select-parser-5947b1b37cc43a76175bf24dd98c2d30.js?body=1" for 127.0.0.1 at 2015-10-27 18:59:09 -0400
+
+
+Started GET "/assets/chosen.jquery-63805af9dffabd503fde60fb7af95b26.js?body=1" for 127.0.0.1 at 2015-10-27 18:59:09 -0400
+
+
+Started GET "/assets/chosen-jquery-a9ee3be772d621557c08693522928162.js?body=1" for 127.0.0.1 at 2015-10-27 18:59:09 -0400
+
+
+Started GET "/assets/jquery.fancybox-04046b98b419175e25ba73d58e983a2e.js?body=1" for 127.0.0.1 at 2015-10-27 18:59:09 -0400
+
+
+Started GET "/assets/jquery.fancybox-buttons-08e63f315809680432dc8970a79171c1.js?body=1" for 127.0.0.1 at 2015-10-27 18:59:09 -0400
+
+
+Started GET "/assets/jquery.fancybox-thumbs-10999e7566e7c2cb47826582d02bf02a.js?body=1" for 127.0.0.1 at 2015-10-27 18:59:09 -0400
+
+
+Started GET "/assets/jquery.fancybox-media-f11aa38339158f728e8fffc3128e9b88.js?body=1" for 127.0.0.1 at 2015-10-27 18:59:09 -0400
+
+
+Started GET "/assets/fancybox-569b667a1af429c2835f5639e98b51ad.js?body=1" for 127.0.0.1 at 2015-10-27 18:59:09 -0400
+
+
+Started GET "/assets/application-770553faff71779b8d86c201bd836133.js?body=1" for 127.0.0.1 at 2015-10-27 18:59:09 -0400
+
+
+Started GET "/assets/noise-69c2feb72841d4d44674d35841d4406a.png" for 127.0.0.1 at 2015-10-27 18:59:09 -0400
+
+
+Started GET "/assets/star-on.png" for 127.0.0.1 at 2015-10-27 18:59:09 -0400
+
+
+Started GET "/assets/star-off.png" for 127.0.0.1 at 2015-10-27 18:59:09 -0400
+
+
+Started GET "/assets/star-half.png" for 127.0.0.1 at 2015-10-27 18:59:09 -0400
+
+
+Started GET "/products/3" for 127.0.0.1 at 2015-10-27 18:59:34 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  SELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 3]]
+  Rendered products/_new_comment.html.erb (0.6ms)
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ?  ORDER BY created_at DESC LIMIT 3 OFFSET 0[0m  [["product_id", 3]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered products/_list_comments.html.erb (5.0ms)
+  Rendered products/show.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 382ms (Views: 378.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/jquery.fancybox-d2ea8617c23f8b447bd1111bc2c54d54.css?body=1" for 127.0.0.1 at 2015-10-27 18:59:34 -0400
+
+
+Started GET "/assets/application-dd2e71deba212e714b082b174dbe69a0.css?body=1" for 127.0.0.1 at 2015-10-27 18:59:34 -0400
+
+
+Started GET "/assets/fancybox-31154555c2bff5c0971ff94c05133a0f.css?body=1" for 127.0.0.1 at 2015-10-27 18:59:34 -0400
+
+
+Started GET "/assets/jquery.fancybox-buttons-772a0455ab04e6570e8474f35b3d84a7.css?body=1" for 127.0.0.1 at 2015-10-27 18:59:34 -0400
+
+
+Started GET "/assets/jquery.raty-0d2d2f85471d50f28f9270d2b3fbccab.css?body=1" for 127.0.0.1 at 2015-10-27 18:59:34 -0400
+
+
+Started GET "/assets/jquery.fancybox-thumbs-311dd398c2f9abd0e404bd841a45bf80.css?body=1" for 127.0.0.1 at 2015-10-27 18:59:34 -0400
+
+
+Started GET "/assets/comments-2be930bcbfd3c3e00190e2193dda5c7c.css?body=1" for 127.0.0.1 at 2015-10-27 18:59:34 -0400
+
+
+Started GET "/assets/payments-2be930bcbfd3c3e00190e2193dda5c7c.css?body=1" for 127.0.0.1 at 2015-10-27 18:59:34 -0400
+
+
+Started GET "/assets/products-d51122189c3bfbce185b17474923942d.css?body=1" for 127.0.0.1 at 2015-10-27 18:59:34 -0400
+
+
+Started GET "/assets/scaffolds-0419717c04d69db1dafb3d5cbf5afb64.css?body=1" for 127.0.0.1 at 2015-10-27 18:59:34 -0400
+
+
+Started GET "/assets/static_pages-45550cf5946f9f89231f7c63940976be.css?body=1" for 127.0.0.1 at 2015-10-27 18:59:34 -0400
+
+
+Started GET "/assets/users-2be930bcbfd3c3e00190e2193dda5c7c.css?body=1" for 127.0.0.1 at 2015-10-27 18:59:34 -0400
+
+
+Started GET "/assets/chosen-32dfab8f477a01578769cda9f1651231.css?body=1" for 127.0.0.1 at 2015-10-27 18:59:34 -0400
+
+
+Started GET "/assets/jquery-4075e3b7b3964707c653f61b66f46dec.js?body=1" for 127.0.0.1 at 2015-10-27 18:59:34 -0400
+
+
+Started GET "/assets/jquery_ujs-f9f4ae336c0d19804775e0e2c8749423.js?body=1" for 127.0.0.1 at 2015-10-27 18:59:34 -0400
+
+
+Started GET "/assets/turbolinks-4031cb0a0613adc8fac596d20e01b074.js?body=1" for 127.0.0.1 at 2015-10-27 18:59:34 -0400
+
+
+Started GET "/assets/comments-0bc27e2168727cafa1252f703137df60.js?body=1" for 127.0.0.1 at 2015-10-27 18:59:34 -0400
+
+
+Started GET "/assets/jquery.raty-a381d4d252d0b3e93d67de409f24a2eb.js?body=1" for 127.0.0.1 at 2015-10-27 18:59:34 -0400
+
+
+Started GET "/assets/payments-0bc27e2168727cafa1252f703137df60.js?body=1" for 127.0.0.1 at 2015-10-27 18:59:34 -0400
+
+
+Started GET "/assets/products-0bc27e2168727cafa1252f703137df60.js?body=1" for 127.0.0.1 at 2015-10-27 18:59:34 -0400
+
+
+Started GET "/assets/scaffold-b8bdb1b56ac8623dd53498b57a53746a.js?body=1" for 127.0.0.1 at 2015-10-27 18:59:34 -0400
+
+
+Started GET "/assets/site-51d39b214e4c9c23c2154c4f960420ca.js?body=1" for 127.0.0.1 at 2015-10-27 18:59:34 -0400
+
+
+Started GET "/assets/static_pages-0bc27e2168727cafa1252f703137df60.js?body=1" for 127.0.0.1 at 2015-10-27 18:59:34 -0400
+
+
+Started GET "/assets/users-0bc27e2168727cafa1252f703137df60.js?body=1" for 127.0.0.1 at 2015-10-27 18:59:34 -0400
+
+
+Started GET "/assets/lib/abstract-chosen-cebdd952962a5b26fafc957a19c1ed8b.js?body=1" for 127.0.0.1 at 2015-10-27 18:59:34 -0400
+
+
+Started GET "/assets/lib/select-parser-5947b1b37cc43a76175bf24dd98c2d30.js?body=1" for 127.0.0.1 at 2015-10-27 18:59:34 -0400
+
+
+Started GET "/assets/chosen.jquery-63805af9dffabd503fde60fb7af95b26.js?body=1" for 127.0.0.1 at 2015-10-27 18:59:34 -0400
+
+
+Started GET "/assets/chosen-jquery-a9ee3be772d621557c08693522928162.js?body=1" for 127.0.0.1 at 2015-10-27 18:59:34 -0400
+
+
+Started GET "/assets/jquery.fancybox-04046b98b419175e25ba73d58e983a2e.js?body=1" for 127.0.0.1 at 2015-10-27 18:59:35 -0400
+
+
+Started GET "/assets/jquery.fancybox-buttons-08e63f315809680432dc8970a79171c1.js?body=1" for 127.0.0.1 at 2015-10-27 18:59:35 -0400
+
+
+Started GET "/assets/jquery.fancybox-thumbs-10999e7566e7c2cb47826582d02bf02a.js?body=1" for 127.0.0.1 at 2015-10-27 18:59:35 -0400
+
+
+Started GET "/assets/jquery.fancybox-media-f11aa38339158f728e8fffc3128e9b88.js?body=1" for 127.0.0.1 at 2015-10-27 18:59:35 -0400
+
+
+Started GET "/assets/fancybox-569b667a1af429c2835f5639e98b51ad.js?body=1" for 127.0.0.1 at 2015-10-27 18:59:35 -0400
+
+
+Started GET "/assets/application-770553faff71779b8d86c201bd836133.js?body=1" for 127.0.0.1 at 2015-10-27 18:59:35 -0400
+
+
+Started GET "/assets/noise-69c2feb72841d4d44674d35841d4406a.png" for 127.0.0.1 at 2015-10-27 18:59:35 -0400
+
+
+Started GET "/assets/star-on.png" for 127.0.0.1 at 2015-10-27 18:59:35 -0400
+
+
+Started GET "/assets/star-off.png" for 127.0.0.1 at 2015-10-27 18:59:35 -0400
+
+
+Started GET "/assets/star-half.png" for 127.0.0.1 at 2015-10-27 18:59:35 -0400
+
+
+Started GET "/products" for 127.0.0.1 at 2015-10-27 18:59:54 -0400
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.4ms)[0m  SELECT "products".* FROM "products"
+  Rendered products/index.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 453ms (Views: 451.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2015-10-27 18:59:58 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.2ms)[0m  SELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 2]]
+  Rendered products/_new_comment.html.erb (1.5ms)
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ?  ORDER BY created_at DESC LIMIT 3 OFFSET 0[0m  [["product_id", 2]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 2]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered products/_list_comments.html.erb (11.0ms)
+  Rendered products/show.html.erb within layouts/application (20.2ms)
+Completed 200 OK in 359ms (Views: 354.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2015-10-27 19:00:02 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 383ms (Views: 379.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2015-10-27 19:00:08 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DfGe9dmHilOax2z2vyC4ThDLQrGMfRjaAQzF3maY8ty7LyKrWyIFpshDptfJC+7ZV+Vv9bi0DnRprS5hKJgwxg==", "user"=>{"email"=>"bradley@careerfoundrysucks.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "bradley@careerfoundrysucks.com"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2015-10-27 18:35:14.737656"], ["current_sign_in_at", "2015-10-27 23:00:08.708971"], ["sign_in_count", 36], ["updated_at", "2015-10-27 23:00:08.710601"], ["id", 3]]
+  [1m[36m (84.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/products
+Completed 302 Found in 394ms (ActiveRecord: 84.7ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-10-27 19:00:08 -0400
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products"
+  Rendered products/index.html.erb within layouts/application (3.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 340ms (Views: 338.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application-dd2e71deba212e714b082b174dbe69a0.css?body=1" for 127.0.0.1 at 2015-10-27 19:00:09 -0400
+
+
+Started GET "/assets/jquery.fancybox-d2ea8617c23f8b447bd1111bc2c54d54.css?body=1" for 127.0.0.1 at 2015-10-27 19:00:09 -0400
+
+
+Started GET "/assets/jquery.fancybox-buttons-772a0455ab04e6570e8474f35b3d84a7.css?body=1" for 127.0.0.1 at 2015-10-27 19:00:09 -0400
+
+
+Started GET "/assets/jquery.fancybox-thumbs-311dd398c2f9abd0e404bd841a45bf80.css?body=1" for 127.0.0.1 at 2015-10-27 19:00:09 -0400
+
+
+Started GET "/assets/jquery.raty-0d2d2f85471d50f28f9270d2b3fbccab.css?body=1" for 127.0.0.1 at 2015-10-27 19:00:09 -0400
+
+
+Started GET "/assets/comments-2be930bcbfd3c3e00190e2193dda5c7c.css?body=1" for 127.0.0.1 at 2015-10-27 19:00:09 -0400
+
+
+Started GET "/assets/payments-2be930bcbfd3c3e00190e2193dda5c7c.css?body=1" for 127.0.0.1 at 2015-10-27 19:00:09 -0400
+
+
+Started GET "/assets/fancybox-31154555c2bff5c0971ff94c05133a0f.css?body=1" for 127.0.0.1 at 2015-10-27 19:00:09 -0400
+
+
+Started GET "/assets/products-d51122189c3bfbce185b17474923942d.css?body=1" for 127.0.0.1 at 2015-10-27 19:00:09 -0400
+
+
+Started GET "/assets/scaffolds-0419717c04d69db1dafb3d5cbf5afb64.css?body=1" for 127.0.0.1 at 2015-10-27 19:00:09 -0400
+
+
+Started GET "/assets/static_pages-45550cf5946f9f89231f7c63940976be.css?body=1" for 127.0.0.1 at 2015-10-27 19:00:09 -0400
+
+
+Started GET "/assets/users-2be930bcbfd3c3e00190e2193dda5c7c.css?body=1" for 127.0.0.1 at 2015-10-27 19:00:09 -0400
+
+
+Started GET "/assets/chosen-32dfab8f477a01578769cda9f1651231.css?body=1" for 127.0.0.1 at 2015-10-27 19:00:09 -0400
+
+
+Started GET "/assets/jquery-4075e3b7b3964707c653f61b66f46dec.js?body=1" for 127.0.0.1 at 2015-10-27 19:00:09 -0400
+
+
+Started GET "/assets/comments-0bc27e2168727cafa1252f703137df60.js?body=1" for 127.0.0.1 at 2015-10-27 19:00:09 -0400
+
+
+Started GET "/assets/jquery_ujs-f9f4ae336c0d19804775e0e2c8749423.js?body=1" for 127.0.0.1 at 2015-10-27 19:00:09 -0400
+
+
+Started GET "/assets/turbolinks-4031cb0a0613adc8fac596d20e01b074.js?body=1" for 127.0.0.1 at 2015-10-27 19:00:09 -0400
+
+
+Started GET "/assets/jquery.raty-a381d4d252d0b3e93d67de409f24a2eb.js?body=1" for 127.0.0.1 at 2015-10-27 19:00:09 -0400
+
+
+Started GET "/assets/payments-0bc27e2168727cafa1252f703137df60.js?body=1" for 127.0.0.1 at 2015-10-27 19:00:09 -0400
+
+
+Started GET "/assets/products-0bc27e2168727cafa1252f703137df60.js?body=1" for 127.0.0.1 at 2015-10-27 19:00:09 -0400
+
+
+Started GET "/assets/scaffold-b8bdb1b56ac8623dd53498b57a53746a.js?body=1" for 127.0.0.1 at 2015-10-27 19:00:09 -0400
+
+
+Started GET "/assets/site-51d39b214e4c9c23c2154c4f960420ca.js?body=1" for 127.0.0.1 at 2015-10-27 19:00:09 -0400
+
+
+Started GET "/assets/static_pages-0bc27e2168727cafa1252f703137df60.js?body=1" for 127.0.0.1 at 2015-10-27 19:00:09 -0400
+
+
+Started GET "/assets/users-0bc27e2168727cafa1252f703137df60.js?body=1" for 127.0.0.1 at 2015-10-27 19:00:09 -0400
+
+
+Started GET "/assets/lib/abstract-chosen-cebdd952962a5b26fafc957a19c1ed8b.js?body=1" for 127.0.0.1 at 2015-10-27 19:00:09 -0400
+
+
+Started GET "/assets/lib/select-parser-5947b1b37cc43a76175bf24dd98c2d30.js?body=1" for 127.0.0.1 at 2015-10-27 19:00:09 -0400
+
+
+Started GET "/assets/chosen.jquery-63805af9dffabd503fde60fb7af95b26.js?body=1" for 127.0.0.1 at 2015-10-27 19:00:09 -0400
+
+
+Started GET "/assets/chosen-jquery-a9ee3be772d621557c08693522928162.js?body=1" for 127.0.0.1 at 2015-10-27 19:00:09 -0400
+
+
+Started GET "/assets/jquery.fancybox-04046b98b419175e25ba73d58e983a2e.js?body=1" for 127.0.0.1 at 2015-10-27 19:00:09 -0400
+
+
+Started GET "/assets/jquery.fancybox-thumbs-10999e7566e7c2cb47826582d02bf02a.js?body=1" for 127.0.0.1 at 2015-10-27 19:00:09 -0400
+
+
+Started GET "/assets/jquery.fancybox-buttons-08e63f315809680432dc8970a79171c1.js?body=1" for 127.0.0.1 at 2015-10-27 19:00:09 -0400
+
+
+Started GET "/assets/jquery.fancybox-media-f11aa38339158f728e8fffc3128e9b88.js?body=1" for 127.0.0.1 at 2015-10-27 19:00:09 -0400
+
+
+Started GET "/assets/fancybox-569b667a1af429c2835f5639e98b51ad.js?body=1" for 127.0.0.1 at 2015-10-27 19:00:09 -0400
+
+
+Started GET "/assets/application-770553faff71779b8d86c201bd836133.js?body=1" for 127.0.0.1 at 2015-10-27 19:00:09 -0400
+
+
+Started GET "/assets/noise-69c2feb72841d4d44674d35841d4406a.png" for 127.0.0.1 at 2015-10-27 19:00:09 -0400
+
+
+Started GET "/products/1" for 127.0.0.1 at 2015-10-27 19:00:12 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  SELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 1]]
+  Rendered shared/_stripe_checkout_button.html.erb (0.6ms)
+  Rendered products/_new_comment.html.erb (2.9ms)
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ?  ORDER BY created_at DESC LIMIT 3 OFFSET 0[0m  [["product_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered products/_list_comments.html.erb (10.8ms)
+  Rendered products/show.html.erb within layouts/application (20.8ms)
+Completed 200 OK in 342ms (Views: 335.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/star-off.png" for 127.0.0.1 at 2015-10-27 19:00:13 -0400
+
+
+Started GET "/assets/star-on.png" for 127.0.0.1 at 2015-10-27 19:00:13 -0400
+
+
+Started GET "/assets/star-half.png" for 127.0.0.1 at 2015-10-27 19:00:13 -0400

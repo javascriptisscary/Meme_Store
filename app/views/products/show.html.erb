@@ -33,6 +33,9 @@
     </div>
   </div>
 </div>
+<% unless signed_in? %>
+  <h3 class="text-center"><a href="/sign_up">Sign up</a> or <a href="/login">Login</a> to leave a review</h3>
+<% end %>
 <%= render 'new_comment' %>
 <%= render 'list_comments' %>
 <% if @user!= nil %>
