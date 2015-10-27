@@ -32,14 +32,13 @@
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav" id ="nav-links">
           <li id="search"><%= form_tag("/products", method: "get") do %>
-            <%= label_tag(:q) %>
             <%= text_field_tag(:q, "Search Products") %>
             <%= submit_tag("Search") %>
           <% end %>
           </li>
-          <li><%= link_to "PRODUCTS", products_path %></li>
-          <li><%= link_to "ABOUT", static_pages_about_path %></li>
-          <li><%=link_to "CONTACT", static_pages_contact_path %></li>
+          <li><%= link_to "PRODUCTS", products_path, class: "navlinks" %></li>
+          <li><%= link_to "ABOUT", static_pages_about_path, class: "navlinks" %></li>
+          <li><%=link_to "CONTACT", static_pages_contact_path, class: "navlinks" %></li>
           <% if user_signed_in? %>
             <li><%= link_to 'profile', user_path(current_user.id)
             
@@ -55,8 +54,14 @@
       </div>
        
   </nav>
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
+<% if flash[:notice] %>
+<p class="notice"><%= flash[:notice] %></p>
+<%=javascript_tag "hide()"%>
+<% end %>
+<% if flash[:alert] %>
+<p class="alert"><%= flash[:alert] %></p>
+<%=javascript_tag "hide()"%>
+<% end %>
 
 <%= yield %>
 

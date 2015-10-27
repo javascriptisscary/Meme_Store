@@ -19,16 +19,7 @@ pre {
   font-size: 11px;
 }
 
-a {
-  color: #000;
-  &:visited {
-    color: #666;
-  }
-  &:hover {
-    color: #fff;
-    background-color: #000;
-  }
-}
+
 
 div {
   &.field, &.actions {
@@ -66,5 +57,6 @@ div {
   ul li {
     font-size: 12px;
     list-style: square;
+    font-family: 'Shadows Into Light', "Helvetica Neue",Helvetica,Arial,sans-serif;
   }
 }

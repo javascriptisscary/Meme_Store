@@ -10,7 +10,7 @@ class Ability
       else
         can :manage, User, id: user.id
         can :read, Order, user_id: user.id
-        can :read, Product
+        can :manage, Product
         
         
     end
