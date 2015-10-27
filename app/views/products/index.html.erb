@@ -4,6 +4,7 @@
     <h2>The only *fake* store where you can buy the funniest programming memes!</h2>
   </div>
 </div>
+<% unless params[:q] %>
 <div class="container">
   <div class = "jumbotron" id="products_jumbo">
     <div class="container">
@@ -11,16 +12,19 @@
           <h1>Featured Meme of the Day</h1>
       </div>
       <div class="col-xs-12">
-        <% for i in 2..2 do %>
+        
+          <% for i in 2..2 do %>
           <a href = "products/<%=@products[i].id%>">
            <img class="products img-responsive" src= "<%= @products[i].image_url %>"></img>
           </a>
       </div>
-        <% end %>
+          <% end %>
+        
     </div>
   </div>
 </div>
 <div class="line"></div>
+<% end %>
 <div class="container" id="products_contain">
   <h1>You know you want one!</h1>
     <div class ="row">

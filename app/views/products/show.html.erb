@@ -1,30 +1,43 @@
 <p id="notice"><%= notice %></p>
+<div class="container show-contain">
+  <div class="row">
+    <div class="col-md-7 col-xs-12">
+      <%= link_to image_tag(@product.image_url, class: 'img-responsive show-product'), @product.image_url, class: 'fancybox'  %>
+      <p class="text-center">
+        <strong>Name:</strong>
+        <%= @product.name %>
+      </p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @product.name %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
-
-<p>
-  
-  <%= link_to image_tag(@product.image_url, width: 400, height: 200), @product.image_url, :class => 'fancybox' %>
-</p>
-<p>
-  <strong>Price:</strong>
-  
-  <%=@product.cents_to_dollars(@product.price)%>
-</p>
-<p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
-<div class="pay-button"><%= form_tag "/payments/create" do %>
-  <%= hidden_field_tag :product_id, @product.id %>
-  <%= render partial: "shared/stripe_checkout_button" %>
-<% end %></div>
+      <p class="text-center">
+        <strong>Description:</strong>
+        <%= @product.description %>
+      </p>
+    </div>
+    <div class="col-md-5 col-xs-12">
+      <p class="text-center" id="price">
+        <strong>Price:
+        <%=@product.cents_to_dollars(@product.price)%>
+        </strong>
+      </p>
+      <p class="text-center">Total Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
+    
+      <div class="pay-button"><%= form_tag "/payments/create" do %>
+        <%= hidden_field_tag :product_id, @product.id %>
+        <% if @user != nil %>
+          <%= render partial: "shared/stripe_checkout_button" %>
+        <% else %>
+          <p><a href="/sign_up">Sign up</a> or <a href="/login">Login</a> to *fake* buy !!</p>
+        <% end %>
+      <% end %>
+      </div>
+    </div>
+  </div>
+</div>
 <%= render 'new_comment' %>
 <%= render 'list_comments' %>
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+<% if @user!= nil %>
+  <% if @user.admin ==true %>
+    <%= link_to 'Edit', edit_product_path(@product) %> |
+    <%= link_to 'Back', products_path %>
+  <% end %>
+<% end %>

@@ -23,7 +23,7 @@ class ProductsController < ApplicationController
   # GET /products/1.json
   def show
     @user = current_user
-    authorize! :read, @user
+   
     @comments = @product.comments.order("created_at DESC")
     @comments = @product.comments.all.order("created_at DESC").paginate(page: params[:page], per_page: 3) 
   end

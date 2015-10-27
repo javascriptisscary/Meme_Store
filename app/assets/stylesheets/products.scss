@@ -76,3 +76,33 @@ box-shadow: -10px 2px 75px 5px rgba(0,0,0,0.75);
 box-shadow: -10px 2px 75px 5px rgba(0,0,0,0.75);
     
 }
+
+/* show page*/
+
+.show-contain {
+    background-color: white;
+    margin-top:2%;
+    border: 2px solid black;
+    margin: 4% auto;
+    
+}
+
+.show-contain p{
+    font-size: 2em;
+    font-family: "Shadows Into Light","Helvetica Neue",Helvetica,Arial,sans-serif;
+    
+    
+}
+
+#price {
+    font-size: 5em;
+    margin: 20% auto;
+}
+
+.show-product{
+    margin: 5% auto;
+    border: 1px solid black;
+    -webkit-box-shadow: -8px 9px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: -8px 9px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: -8px 9px 5px 0px rgba(0,0,0,0.75);
+}
