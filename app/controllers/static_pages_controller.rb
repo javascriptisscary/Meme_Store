@@ -9,6 +9,10 @@ class StaticPagesController < ApplicationController
      @user =current_user
   end
   
+  def about
+   @user =current_user
+  end
+  
   def thank_you
   @user =current_user
   @name = params[:name]
