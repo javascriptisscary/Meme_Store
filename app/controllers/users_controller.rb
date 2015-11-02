@@ -11,6 +11,7 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
+    @user = current_user
     #if user is not admin, cannot access index page
     if current_user.admin == false
       flash[:notice] = "You are not allowed access to the Users page."
@@ -23,7 +24,7 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
-    
+    @user = current_user
   end
 
   # GET /users/new

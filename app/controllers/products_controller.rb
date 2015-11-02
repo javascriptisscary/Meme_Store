@@ -7,7 +7,7 @@ class ProductsController < ApplicationController
 
   
   def index
-    
+    @user = current_user
     if params[:q]
       search_term = params[:q]
       @products = Product.where("name LIKE ?", "%#{search_term}%")
@@ -17,6 +17,9 @@ class ProductsController < ApplicationController
       
     end
   end
+
+
+    
 
 
   # GET /products/1
@@ -31,13 +34,16 @@ class ProductsController < ApplicationController
   # GET /products/new
   def new
     @product = Product.new
+     @user = current_user
   end
 
   # GET /products/1/edit
   def edit
+     @user = current_user
   end
 
   def thank_you
+  @user = current_user
   @name = params[:name]
   @email = params[:email]
   @message = params[:message]
@@ -53,6 +59,7 @@ class ProductsController < ApplicationController
   # POST /products
   # POST /products.json
   def create
+    @user = current_user
     @product = Product.new(product_params)
 
     respond_to do |format|
@@ -69,6 +76,7 @@ class ProductsController < ApplicationController
   # PATCH/PUT /products/1
   # PATCH/PUT /products/1.json
   def update
+    @user = current_user
     respond_to do |format|
       if @product.update(product_params)
         format.html { redirect_to @product, notice: 'Product was successfully updated.' }
@@ -83,6 +91,7 @@ class ProductsController < ApplicationController
   # DELETE /products/1
   # DELETE /products/1.json
   def destroy
+    @user = current_user
     @product.destroy
     respond_to do |format|
       format.html { redirect_to products_url, notice: 'Product was successfully destroyed.' }

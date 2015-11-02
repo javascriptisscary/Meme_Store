@@ -1,0 +1,9 @@
+o: ActiveSupport::Cache::Entry:@valueI"Y         <tr>
+          <td>Stable</td>
+          <td>Stable on all platforms</td>
+          <td>2000</td>
+          <td><a href="/products/1">Show</a></td>
+          <td><a href="/products/1/edit">Edit</a></td>
+          <td><a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/products/1">Destroy</a></td>
+         </tr>
+:ET:@created_atf1446496698.573047:@expires_in0

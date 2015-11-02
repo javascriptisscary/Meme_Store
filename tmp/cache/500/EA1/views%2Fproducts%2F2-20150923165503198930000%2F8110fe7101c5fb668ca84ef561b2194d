@@ -1,0 +1,9 @@
+o: ActiveSupport::Cache::Entry:@valueI"Z         <tr>
+          <td>IE</td>
+          <td>IE is the very best browser!</td>
+          <td>4500</td>
+          <td><a href="/products/2">Show</a></td>
+          <td><a href="/products/2/edit">Edit</a></td>
+          <td><a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/products/2">Destroy</a></td>
+         </tr>
+:ET:@created_atf1446497148.8170357:@expires_in0

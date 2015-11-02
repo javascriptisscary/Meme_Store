@@ -54,6 +54,17 @@
       </div>
        
   </nav>
+<% if user_signed_in? && @user.admin ==true %>
+  <section id ="admin-bar">
+    <div class= "container-responsive">
+      <header id="admin-header">Admin Panel</header>
+      <ul class="admin-links">
+        <li><%= link_to "Create Product", new_product_path, class: "navlinks" %></li>
+        <li>|</li>
+        <li><%= link_to "Users Index", users_path, class: "navlinks" %></li>
+    </div>
+  </section>
+<% end %>
 <% if flash[:notice] %>
 <p class="notice"><%= flash[:notice] %></p>
 <%=javascript_tag "hide()"%>

@@ -145,3 +145,30 @@ h4 {
     text-align:center;
 }
 
+/* admin */
+#admin-bar {
+    background-color: orange;
+    color:black;
+    height:30px;
+ 
+    border-bottom: 1px solid black;
+    
+}
+
+#admin-header{
+    float:left;
+    font-size: 1.5em;
+    color: white;
+    text-shadow: 1px 1px black;
+    
+}
+
+.admin-links{
+    float:right;
+    
+}
+
+.admin-links li {
+    display: inline-block;
+    
+}
