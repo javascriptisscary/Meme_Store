@@ -45,10 +45,14 @@
   <h1>Search Results</h1>
   <div class ="row">
     <% @products.each do |product| %>
-      <div class ="col-xs-12 col-md-6">
-        <a href = "products/<%=product.id%>">
-          <img class="img-responsive products" src= "<%= product.image_url %>"></img>
-        </a>
+      <div class ="col-xs-6 col-lg-4">
+        <%= link_to product_path(product.id) do %>
+          <%= image_tag product.meme.url(:original), class: "products img-responsive" %>
+        <% end %>
+        <div class="name">
+          <%= product.name %>
+        
+        <%= product.price %>
       </div>
   </div>    
     <% end %>
@@ -60,10 +64,20 @@
       <% cache cache_key_for_products do %>
       <% @products.each do |product| %>
        <% cache product do %>
-        <div class ="col-xs-12 col-md-6">
-          <a href = "products/<%=product.id%>">
-            <img class="img-responsive products" src= "<%= product.image_url %>"></img>
-          </a>
+        <div class ="col-xs-6 col-lg-4">
+        <%= link_to product_path(product.id) do %>
+            <%= image_tag product.meme.url(:original), class: "products img-responsive" %>
+            
+        <% end %>
+          
+          
+          
+          <div class="name">
+            <strong><%= product.name %></strong>
+          </div>
+          <div class="pull-right">
+            <%= product.cents_to_dollars(product.price) %>
+          </div>
         </div>
           <% end %>
         <% end %>

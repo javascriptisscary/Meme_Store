@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150929213956) do
+ActiveRecord::Schema.define(version: 20160223182534) do
 
   create_table "comments", force: :cascade do |t|
     t.integer  "user_id"
@@ -39,11 +39,15 @@ ActiveRecord::Schema.define(version: 20150929213956) do
     t.string   "name"
     t.text     "description"
     t.string   "image_url"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
     t.string   "color"
     t.string   "size"
     t.string   "price"
+    t.string   "meme_file_name"
+    t.string   "meme_content_type"
+    t.integer  "meme_file_size"
+    t.datetime "meme_updated_at"
   end
 
   create_table "users", force: :cascade do |t|

@@ -68,15 +68,15 @@ margin-bottom:10%;
  
 }
 
-#products_contain h1 {
-    margin-bottom: 5%;
-    font-size: 4em;
-}
+
 
 .products {
-    margin: 4% auto;
+    
+    
+    margin-top: 5%;
+    margin-bottom: 1%;
     border: 1px black solid;
-
+    clear: both;
     
 }
 
@@ -107,4 +107,27 @@ margin-bottom:10%;
     margin: 5% auto;
     border: 1px solid black;
 
+}
+
+
+.form-control {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.btn-default {
+    margin: 0 auto;
+}
+
+.name {
+    text-transform: uppercase;
+    
+    font-family: 'Fjalla One';
+    float: left;
+    clear: none
+}
+
+.pull-right {
+    float: right;
+    
 }

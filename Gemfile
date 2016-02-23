@@ -45,7 +45,7 @@ gem 'hirb'
   #caching
 gem 'dalli'
   
-
+gem "paperclip", "~> 4.3"
 
 gem 'newrelic_rpm'
   
