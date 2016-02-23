@@ -501,3 +501,5 @@
 [2016-02-23 13:26:49 -0500 kenny-N56VM (24008)] INFO : Finished instrumentation
 [2016-02-23 13:26:50 -0500 kenny-N56VM (24008)] INFO : Doing deferred dependency-detection before Rack startup
 [2016-02-23 13:26:51 -0500 kenny-N56VM (24008)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1112093/applications/9439796
+[2016-02-23 16:03:28 -0500 kenny-N56VM (23326)] INFO : Starting Agent shutdown
+[2016-02-23 16:03:28 -0500 kenny-N56VM (23955)] INFO : Starting Agent shutdown

@@ -65,6 +65,7 @@ group :production do
   #postgres
   gem 'pg'
    gem 'rails_12factor'
+   gem 'aws-sdk', '~> 1.6'
 end
 
 
