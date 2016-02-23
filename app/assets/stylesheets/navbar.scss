@@ -1,0 +1,111 @@
+.navbar {
+  font-family: 'PT Sans', "Helvetica Neue",Helvetica,Arial,sans-serif;
+  height: 60px;
+  margin-bottom: 0;
+}
+
+
+
+.navbar-header a {
+    
+    color:white;
+    font-size: 3em;
+    
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: white;
+    transition: .5s;
+    font-family: 'PT Sans', "Helvetica Neue",Helvetica,Arial,sans-serif;
+    
+}
+
+.navbar-inverse .navbar-nav > li > a:hover {
+    color: #36ABCE;
+}
+
+.navlinks {
+    border-left: 1px solid #444;
+    border-right: 1px solid #000;
+    padding-top:30px;
+    font-weight: 700;
+}
+
+
+
+
+.navbar-nav {
+    
+    
+    font-size: 1.25em;
+}
+
+
+
+
+.navbar-brand {
+color:white;        
+border-right: 1px solid #000;
+font-weight: 700;
+text-transform: underline;
+}
+    
+    
+.search {
+    border-left: 1px solid #444;
+}
+
+.search-form {
+  color: #999;
+  opacity: 1;
+  font-size: 14px;
+  font-family: 'PT Sans';
+  height: 33px;
+  margin-top: 10px;
+  margin-left:15px;
+ 
+}
+
+
+
+
+
+
+.submit {
+    padding-top:10px;
+}
+
+
+.glyphicon-search {
+    color:white;
+    background-color: gray;
+    
+}
+
+#nav {
+   height: 60px;
+   
+}
+
+
+
+
+
+
+.login  {
+    font-size: .5em;
+    float: right;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-family: 'PT Sans';
+    transition: .5s;
+    list-style: none;
+    font-weight: 700;
+    
+}
+
+
+.login a:hover {
+    color: #36ABCE;
+}
+

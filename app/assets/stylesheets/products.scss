@@ -37,10 +37,8 @@ table thead tr {
 }
 
 #products_jumbo {
-    font-family: "Shadows Into Light","Helvetica Neue",Helvetica,Arial,sans-serif;
--webkit-box-shadow: -10px 2px 75px 5px rgba(0,0,0,0.75);
--moz-box-shadow: -10px 2px 75px 5px rgba(0,0,0,0.75);
-box-shadow: -10px 2px 75px 5px rgba(0,0,0,0.75);
+    font-family: "PT sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+
 text-align: center;
 margin-bottom:10%;
 
@@ -51,14 +49,21 @@ margin-bottom:10%;
     margin-left: auto;
     margin-right: auto;
     border: 2px solid black;
-    -webkit-box-shadow: -10px 2px 75px 5px rgba(0,0,0,0.75);
--moz-box-shadow: -10px 2px 75px 5px rgba(0,0,0,0.75);
-box-shadow: -10px 2px 75px 5px rgba(0,0,0,0.75);
+
+}
+
+.line {
+    border-bottom: 1px solid #C0C0C0;
+    width:50%;
+    margin-top: 60px;
+    margin-bottom:50px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #products_contain {
-    font-family: "Shadows Into Light","Helvetica Neue",Helvetica,Arial,sans-serif;
-    background: white;
+    font-family: "PT Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    
     
  
 }
@@ -71,25 +76,24 @@ box-shadow: -10px 2px 75px 5px rgba(0,0,0,0.75);
 .products {
     margin: 4% auto;
     border: 1px black solid;
-    -webkit-box-shadow: -10px 2px 75px 5px rgba(0,0,0,0.75);
--moz-box-shadow: -10px 2px 75px 5px rgba(0,0,0,0.75);
-box-shadow: -10px 2px 75px 5px rgba(0,0,0,0.75);
+
     
 }
 
 /* show page*/
 
 .show-contain {
-    background-color: white;
+    background-color: #FFFFFF;
     margin-top:2%;
     border: 2px solid black;
     margin: 4% auto;
+    border-radius: 5%;
     
 }
 
 .show-contain p{
     font-size: 2em;
-    font-family: "Shadows Into Light","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "PT sans","Helvetica Neue",Helvetica,Arial,sans-serif;
     
     
 }
@@ -102,7 +106,5 @@ box-shadow: -10px 2px 75px 5px rgba(0,0,0,0.75);
 .show-product{
     margin: 5% auto;
     border: 1px solid black;
-    -webkit-box-shadow: -8px 9px 5px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: -8px 9px 5px 0px rgba(0,0,0,0.75);
-    box-shadow: -8px 9px 5px 0px rgba(0,0,0,0.75);
+
 }

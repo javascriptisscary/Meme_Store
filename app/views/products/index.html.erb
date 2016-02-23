@@ -38,33 +38,8 @@
 <% end %>
   
   
-<div class="container">  
-  <div class="jumbotron" id="main_jumbo">
-    <h1>The Meme Store</h1>
-    <h2>The only *fake* store where you can buy the funniest programming memes!</h2>
-  </div>
-</div>
-<% unless params[:q] %>
-<div class="container">
-  <div class = "jumbotron" id="products_jumbo">
-    <div class="container">
-      <div class ="col-xs-12">
-          <h1>Featured Meme of the Day</h1>
-      </div>
-      <div class="col-xs-12">
-        
-          <% for i in 2..2 do %>
-          <a href = "products/<%=@products[i].id%>">
-           <img class="products img-responsive" src= "<%= @products[i].image_url %>"></img>
-          </a>
-      </div>
-          <% end %>
-        
-    </div>
-  </div>
-</div>
-<div class="line"></div>
-<% end %>
+<div class='line'></div>
+
 <div class="container" id="products_contain">
   <% if params[:q] %>
   <h1>Search Results</h1>
@@ -80,7 +55,7 @@
 </div>
   <% else %>
   
-  <h1>You know you want one!</h1>
+  
     <div class ="row">
       <% cache cache_key_for_products do %>
       <% @products.each do |product| %>
