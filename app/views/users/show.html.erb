@@ -1,6 +1,6 @@
-<p id="notice"><%= notice %></p>
 
-<p>
+<section class="container">
+<p class="first">
   <strong>First Name:</strong>
   <%= @user.first_name %>
 </p>
@@ -18,3 +18,4 @@
 <p> <%= link_to 'Your Orders', orders_path %> </p>
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
+</section>
