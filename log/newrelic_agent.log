@@ -503,3 +503,41 @@
 [2016-02-23 13:26:51 -0500 kenny-N56VM (24008)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1112093/applications/9439796
 [2016-02-23 16:03:28 -0500 kenny-N56VM (23326)] INFO : Starting Agent shutdown
 [2016-02-23 16:03:28 -0500 kenny-N56VM (23955)] INFO : Starting Agent shutdown
+[2016-02-23 16:18:46 -0500 kenny-N56VM (27832)] INFO : Starting the New Relic agent in "development" environment.
+[2016-02-23 16:18:46 -0500 kenny-N56VM (27832)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2016-02-23 16:18:46 -0500 kenny-N56VM (27832)] INFO : Reading configuration from config/newrelic.yml (/home/kenny/rubystack-2.2.2-3/linux_bike)
+[2016-02-23 16:18:46 -0500 kenny-N56VM (27817)] INFO : Starting the New Relic agent in "development" environment.
+[2016-02-23 16:18:46 -0500 kenny-N56VM (27817)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2016-02-23 16:18:46 -0500 kenny-N56VM (27817)] INFO : Reading configuration from config/newrelic.yml (/home/kenny/rubystack-2.2.2-3/linux_bike)
+[2016-02-23 16:18:46 -0500 kenny-N56VM (27832)] INFO : New Relic Agent Developer Mode enabled.
+[2016-02-23 16:18:46 -0500 kenny-N56VM (27817)] INFO : New Relic Agent Developer Mode enabled.
+[2016-02-23 16:18:46 -0500 kenny-N56VM (27832)] INFO : Environment: development
+[2016-02-23 16:18:46 -0500 kenny-N56VM (27832)] INFO : No known dispatcher detected.
+[2016-02-23 16:18:46 -0500 kenny-N56VM (27832)] INFO : Application: My Application (Development)
+[2016-02-23 16:18:46 -0500 kenny-N56VM (27817)] INFO : Environment: development
+[2016-02-23 16:18:46 -0500 kenny-N56VM (27817)] INFO : No known dispatcher detected.
+[2016-02-23 16:18:46 -0500 kenny-N56VM (27817)] INFO : Application: My Application (Development)
+[2016-02-23 16:18:46 -0500 kenny-N56VM (27817)] INFO : Installing Rails 3+ middleware instrumentation
+[2016-02-23 16:18:46 -0500 kenny-N56VM (27817)] INFO : Installing ActiveJob instrumentation
+[2016-02-23 16:18:46 -0500 kenny-N56VM (27832)] INFO : Installing Rails 3+ middleware instrumentation
+[2016-02-23 16:18:46 -0500 kenny-N56VM (27832)] INFO : Installing ActiveJob instrumentation
+[2016-02-23 16:18:46 -0500 kenny-N56VM (27817)] INFO : Installing deferred Rack::Builder instrumentation
+[2016-02-23 16:18:46 -0500 kenny-N56VM (27817)] INFO : Installing Rack::Builder middleware instrumentation
+[2016-02-23 16:18:46 -0500 kenny-N56VM (27817)] INFO : Installing Memcache instrumentation for dalli gem
+[2016-02-23 16:18:46 -0500 kenny-N56VM (27817)] INFO : Installing ActiveRecord 4+ instrumentation
+[2016-02-23 16:18:46 -0500 kenny-N56VM (27817)] INFO : Installing Net instrumentation
+[2016-02-23 16:18:46 -0500 kenny-N56VM (27817)] INFO : Installing Rails 4 view instrumentation
+[2016-02-23 16:18:46 -0500 kenny-N56VM (27817)] INFO : Installing Rails 4 Error instrumentation
+[2016-02-23 16:18:46 -0500 kenny-N56VM (27817)] INFO : Installing Rails 4 Controller instrumentation
+[2016-02-23 16:18:46 -0500 kenny-N56VM (27817)] INFO : Finished instrumentation
+[2016-02-23 16:18:46 -0500 kenny-N56VM (27832)] INFO : Installing deferred Rack::Builder instrumentation
+[2016-02-23 16:18:46 -0500 kenny-N56VM (27832)] INFO : Installing Rack::Builder middleware instrumentation
+[2016-02-23 16:18:46 -0500 kenny-N56VM (27832)] INFO : Installing Memcache instrumentation for dalli gem
+[2016-02-23 16:18:46 -0500 kenny-N56VM (27832)] INFO : Installing ActiveRecord 4+ instrumentation
+[2016-02-23 16:18:46 -0500 kenny-N56VM (27832)] INFO : Installing Net instrumentation
+[2016-02-23 16:18:46 -0500 kenny-N56VM (27832)] INFO : Installing Rails 4 view instrumentation
+[2016-02-23 16:18:46 -0500 kenny-N56VM (27832)] INFO : Installing Rails 4 Error instrumentation
+[2016-02-23 16:18:46 -0500 kenny-N56VM (27832)] INFO : Installing Rails 4 Controller instrumentation
+[2016-02-23 16:18:46 -0500 kenny-N56VM (27832)] INFO : Finished instrumentation
+[2016-02-23 16:18:47 -0500 kenny-N56VM (27817)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1112093/applications/9439796
+[2016-02-23 16:18:48 -0500 kenny-N56VM (27832)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1112093/applications/9439796
