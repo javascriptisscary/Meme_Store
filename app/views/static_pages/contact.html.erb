@@ -1,10 +1,11 @@
+<section class="container">
 <h1>Contact Us</h1>
 
 <%= flash[:notice] %>
 
 <%= form_tag("/static_pages/thank_you") do %>
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-xs-12 text-center">
         <div class="form-group">
             <%= label_tag :name, "Name" %>
         <%= text_field_tag :name, nil, class: "form-control", placeholder: "Enter Name" %>
@@ -26,7 +27,9 @@
             <%= label_tag :accept, 'Accept Terms of Service' %>
             <%= check_box_tag :accept %>
         </div>
+        <%= submit_tag "Send", class: "btn" %> 
     </div>
 </div> 
-<%= submit_tag "Send" %>   
+  
 <% end %>
+</section>
