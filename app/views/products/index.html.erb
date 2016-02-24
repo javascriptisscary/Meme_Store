@@ -37,7 +37,9 @@
   <% end %>
 <% end %>
   
-  
+  <div class="container second-nav">
+    
+  </div>
 <div class='line'></div>
 
 <div class="container" id="products_contain">
@@ -50,10 +52,11 @@
           <%= image_tag product.meme.url(:original), class: "products img-responsive" %>
         <% end %>
         <div class="name">
-          <%= product.name %>
-        
-        <%= product.price %>
-      </div>
+          <strong><%= product.name %></strong>
+        </div>
+        <div class="pull-right">
+            <%= product.cents_to_dollars(product.price) %>
+          </div>
   </div>    
     <% end %>
 </div>

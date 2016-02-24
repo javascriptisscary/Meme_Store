@@ -1,8 +1,12 @@
-<h3><strong> Confirmed</strong></h3>
-
-#would be nice to be able to add all the info from the order here via the DB
-
-Thank you for your payment of whatever.
-
-
-Here we will list attributes from table.
+<section class="container payment-contain">
+  <div class="row">
+    <div class="col-sm-6 col-xs-12">
+<%= image_tag @product.meme.url(:original), class: "img-responsive image-payment" %>
+    </div>
+    <div class="col-sm-6 col-xs-12">
+      <h2><strong>Order Confirmed</strong></h2>
+      <p>Thank you for your payment of <%= @product.cents_to_dollars(@product.price) %> for the <%=@product.name %> Meme.</p>
+      <p>This purchase will be logged in your orders inside of your profile.</p>
+    </div>
+  </div>
+</section>

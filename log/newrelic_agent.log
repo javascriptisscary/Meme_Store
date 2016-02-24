@@ -541,3 +541,47 @@
 [2016-02-23 16:18:46 -0500 kenny-N56VM (27832)] INFO : Finished instrumentation
 [2016-02-23 16:18:47 -0500 kenny-N56VM (27817)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1112093/applications/9439796
 [2016-02-23 16:18:48 -0500 kenny-N56VM (27832)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1112093/applications/9439796
+[2016-02-23 23:37:22 -0500 kenny-N56VM (24008)] INFO : Starting Agent shutdown
+[2016-02-23 23:37:25 -0500 kenny-N56VM (27817)] INFO : Starting Agent shutdown
+[2016-02-23 23:37:41 -0500 kenny-N56VM (27832)] INFO : Starting Agent shutdown
+[2016-02-24 10:53:18 -0500 kenny-N56VM (3388)] INFO : Starting the New Relic agent in "development" environment.
+[2016-02-24 10:53:18 -0500 kenny-N56VM (3388)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2016-02-24 10:53:18 -0500 kenny-N56VM (3388)] INFO : Reading configuration from config/newrelic.yml (/home/kenny/rubystack-2.2.2-3/linux_bike)
+[2016-02-24 10:53:18 -0500 kenny-N56VM (3388)] INFO : New Relic Agent Developer Mode enabled.
+[2016-02-24 10:53:18 -0500 kenny-N56VM (3388)] INFO : Environment: development
+[2016-02-24 10:53:18 -0500 kenny-N56VM (3388)] INFO : Dispatcher: webrick
+[2016-02-24 10:53:18 -0500 kenny-N56VM (3388)] INFO : Application: My Application (Development)
+[2016-02-24 10:53:18 -0500 kenny-N56VM (3388)] INFO : Installing Rails 3+ middleware instrumentation
+[2016-02-24 10:53:18 -0500 kenny-N56VM (3388)] INFO : Installing ActiveJob instrumentation
+[2016-02-24 10:53:19 -0500 kenny-N56VM (3388)] INFO : Installing deferred Rack::Builder instrumentation
+[2016-02-24 10:53:19 -0500 kenny-N56VM (3388)] INFO : Installing Rack::Builder middleware instrumentation
+[2016-02-24 10:53:19 -0500 kenny-N56VM (3388)] INFO : Installing Memcache instrumentation for dalli gem
+[2016-02-24 10:53:19 -0500 kenny-N56VM (3388)] INFO : Installing ActiveRecord 4+ instrumentation
+[2016-02-24 10:53:19 -0500 kenny-N56VM (3388)] INFO : Installing Net instrumentation
+[2016-02-24 10:53:19 -0500 kenny-N56VM (3388)] INFO : Installing Rails 4 view instrumentation
+[2016-02-24 10:53:19 -0500 kenny-N56VM (3388)] INFO : Installing Rails 4 Error instrumentation
+[2016-02-24 10:53:19 -0500 kenny-N56VM (3388)] INFO : Installing Rails 4 Controller instrumentation
+[2016-02-24 10:53:19 -0500 kenny-N56VM (3388)] INFO : Finished instrumentation
+[2016-02-24 10:53:20 -0500 kenny-N56VM (3388)] INFO : Doing deferred dependency-detection before Rack startup
+[2016-02-24 10:53:20 -0500 kenny-N56VM (3388)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1112093/applications/9439796
+[2016-02-24 12:40:21 -0500 kenny-N56VM (3388)] INFO : Starting Agent shutdown
+[2016-02-24 12:40:29 -0500 kenny-N56VM (6096)] INFO : Starting the New Relic agent in "development" environment.
+[2016-02-24 12:40:29 -0500 kenny-N56VM (6096)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2016-02-24 12:40:29 -0500 kenny-N56VM (6096)] INFO : Reading configuration from config/newrelic.yml (/home/kenny/rubystack-2.2.2-3/linux_bike)
+[2016-02-24 12:40:29 -0500 kenny-N56VM (6096)] INFO : New Relic Agent Developer Mode enabled.
+[2016-02-24 12:40:29 -0500 kenny-N56VM (6096)] INFO : Environment: development
+[2016-02-24 12:40:29 -0500 kenny-N56VM (6096)] INFO : Dispatcher: webrick
+[2016-02-24 12:40:29 -0500 kenny-N56VM (6096)] INFO : Application: My Application (Development)
+[2016-02-24 12:40:29 -0500 kenny-N56VM (6096)] INFO : Installing Rails 3+ middleware instrumentation
+[2016-02-24 12:40:29 -0500 kenny-N56VM (6096)] INFO : Installing ActiveJob instrumentation
+[2016-02-24 12:40:29 -0500 kenny-N56VM (6096)] INFO : Installing deferred Rack::Builder instrumentation
+[2016-02-24 12:40:29 -0500 kenny-N56VM (6096)] INFO : Installing Rack::Builder middleware instrumentation
+[2016-02-24 12:40:29 -0500 kenny-N56VM (6096)] INFO : Installing Memcache instrumentation for dalli gem
+[2016-02-24 12:40:29 -0500 kenny-N56VM (6096)] INFO : Installing ActiveRecord 4+ instrumentation
+[2016-02-24 12:40:29 -0500 kenny-N56VM (6096)] INFO : Installing Net instrumentation
+[2016-02-24 12:40:29 -0500 kenny-N56VM (6096)] INFO : Installing Rails 4 view instrumentation
+[2016-02-24 12:40:29 -0500 kenny-N56VM (6096)] INFO : Installing Rails 4 Error instrumentation
+[2016-02-24 12:40:29 -0500 kenny-N56VM (6096)] INFO : Installing Rails 4 Controller instrumentation
+[2016-02-24 12:40:29 -0500 kenny-N56VM (6096)] INFO : Finished instrumentation
+[2016-02-24 12:40:29 -0500 kenny-N56VM (6096)] INFO : Doing deferred dependency-detection before Rack startup
+[2016-02-24 12:40:30 -0500 kenny-N56VM (6096)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1112093/applications/9439796

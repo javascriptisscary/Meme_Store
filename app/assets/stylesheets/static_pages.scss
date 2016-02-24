@@ -31,6 +31,40 @@ text-align:center;
     margin-top: 10%;
 }
 
-// Place all the styles related to the static_pages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.about-contain {
+    margin-top:4%;
+    font-family: 'PT Sans';
+    text-align: left;
+}
+
+.fjalla {
+   
+}
+
+.about-us {
+   font-family: 'Fjalla One';
+   font-size: 5em;
+   margin-top: 0;
+}
+
+.col-line {
+    border-right: 5px dashed black;
+}
+
+
+.about-p {
+    font-size: 1.5em;
+    font-family: 'Fjalla One';
+    margin-top: 0;
+    
+}
+
+.about-pics-contain {
+    margin-top: 7%;
+    
+}
+
+.us {
+border: 1px solid black;
+}
