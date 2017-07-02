@@ -5,29 +5,22 @@ table{
     text-align:center;
     margin: 2% auto;
     width:80%;
-    
 }
 
 table thead tr {
     border-bottom:1px dashed white;
-    
 }
 
 tr th {
-    
     text-align: center;
-    
 }
 
 h1 {
     text-align: center;
-    
 }
 
 table thead tr {
-    
     font-size:1.5em;
-    
 }
 
 
@@ -38,10 +31,8 @@ table thead tr {
 
 #products_jumbo {
     font-family: "PT sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-
-text-align: center;
-margin-bottom:10%;
-
+    text-align: center;
+    margin-bottom:10%;
 }
 
 #featured {
@@ -49,7 +40,6 @@ margin-bottom:10%;
     margin-left: auto;
     margin-right: auto;
     border: 2px solid black;
-
 }
 
 .line {
@@ -63,21 +53,15 @@ margin-bottom:10%;
 
 #products_contain {
     font-family: "PT Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-    
-    
- 
 }
 
 
 
 .products {
-    
-    
     margin-top: 5%;
     margin-bottom: 1%;
     border: 1px black solid;
     clear: both;
-    
 }
 
 /* show page*/
@@ -88,14 +72,11 @@ margin-bottom:10%;
     border: 2px solid black;
     margin: 4% auto;
     border-radius: 5%;
-    
 }
 
 .show-contain p{
     font-size: 2em;
     font-family: "PT sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-    
-    
 }
 
 #price {
@@ -106,7 +87,6 @@ margin-bottom:10%;
 .show-product{
     margin: 5% auto;
     border: 1px solid black;
-
 }
 
 
@@ -121,7 +101,6 @@ margin-bottom:10%;
 
 .name {
     text-transform: uppercase;
-    
     font-family: 'Fjalla One';
     float: left;
     clear: none
@@ -129,5 +108,4 @@ margin-bottom:10%;
 
 .pull-right {
     float: right;
-    
 }

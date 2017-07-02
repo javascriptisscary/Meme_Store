@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :timeoutable
 
-has_many :orders
+  has_many :orders
 
  #length of session for user
   def timeout_in
@@ -14,9 +14,5 @@ has_many :orders
       1.hour
     end
   end
-
-
- 
-
 
 end

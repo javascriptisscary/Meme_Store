@@ -1,13 +1,13 @@
 class Product < ActiveRecord::Base
-   has_many :orders
-   has_many :comments,
-             dependent: :destroy
+  has_many :orders
+  has_many :comments,
+            dependent: :destroy
   
-   has_attached_file :meme, styles: { original: "640x480>", med: "320x240>" }, default_url: "/images/:style/missing.png"
-   validates_attachment_content_type :meme, content_type: /\Aimage\/.*\Z/
+  has_attached_file :meme, styles: { original: "640x480>", med: "320x240>" }, default_url: "/images/:style/missing.png"
+  validates_attachment_content_type :meme, content_type: /\Aimage\/.*\Z/
   
-  
-   validates :name, presence: true
+
+  validates :name, presence: true
    
   validates_with AttachmentPresenceValidator, attributes: :meme
   validates_attachment_content_type :meme, content_type: /\Aimage\/.*\Z/

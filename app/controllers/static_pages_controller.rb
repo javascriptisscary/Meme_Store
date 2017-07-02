@@ -10,14 +10,14 @@ class StaticPagesController < ApplicationController
   end
   
   def about
-   @user =current_user
+    @user =current_user
   end
   
   def thank_you
-  @user =current_user
-  @name = params[:name]
-  @email = params[:email]
-  @message = params[:message]
-  UserMailer.contact_form(@email, @name, @message).deliver
+    @user =current_user
+    @name = params[:name]
+    @email = params[:email]
+    @message = params[:message]
+    UserMailer.contact_form(@email, @name, @message).deliver
   end
 end

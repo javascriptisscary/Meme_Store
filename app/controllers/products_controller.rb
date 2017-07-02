@@ -3,9 +3,6 @@ class ProductsController < ApplicationController
   
   # GET /products
   # GET /products.json
-  
-
-  
   def index
     @user = current_user
     if params[:q]
@@ -15,24 +12,16 @@ class ProductsController < ApplicationController
       else
         @products = Product.where("name LIKE ?", "%#{search_term}%")
        end
-       
-      
     else
       @products = Product.all
-      
-      
     end
   end
-
-
-    
-
 
   # GET /products/1
   # GET /products/1.json
   def show
     @user = current_user
-   
+
     @comments = @product.comments.order("created_at DESC")
     @comments = @product.comments.all.order("created_at DESC").paginate(page: params[:page], per_page: 3) 
   end
@@ -40,28 +29,25 @@ class ProductsController < ApplicationController
   # GET /products/new
   def new
     @product = Product.new
-     @user = current_user
+    @user = current_user
   end
 
   # GET /products/1/edit
   def edit
-     @user = current_user
+    @user = current_user
   end
 
   def thank_you
-  @user = current_user
-  @name = params[:name]
-  @email = params[:email]
-  @message = params[:message]
-  ActionMailer::Base.mail(:from => @email, 
-        :to => 'crazedpokerplayer@mail.com', 
-        :subject => "A new contact form message from #{@name}", 
-        :body => @message).deliver
+    @user = current_user
+    @name = params[:name]
+    @email = params[:email]
+    @message = params[:message]
+    ActionMailer::Base.mail(:from => @email, 
+          :to => 'crazedpokerplayer@mail.com', 
+          :subject => "A new contact form message from #{@name}", 
+          :body => @message).deliver
   end
 
-  
-  
-  
   # POST /products
   # POST /products.json
   def create

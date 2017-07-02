@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
   
-   protected
+  protected
 
 #after successful signin, redirect to products page like a boss.
   def after_sign_in_path_for(resource)
@@ -17,7 +17,7 @@ class ApplicationController < ActionController::Base
   end
   
   rescue_from CanCan::AccessDenied do |exception|
-  redirect_to main_app.root_url, :alert => exception.message
+    redirect_to main_app.root_url, :alert => exception.message
   end
 
   def authorize_admin
@@ -25,7 +25,6 @@ class ApplicationController < ActionController::Base
         flash[:notice] = "You are not allowed access to this page."
         redirect_to root_path
     end
-    
   end
   
 end
